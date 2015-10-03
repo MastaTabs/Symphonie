@@ -1,0 +1,2596 @@
+@DATABASE Symphonie.guide
+@$VER: Symphonie.guide 2.4h
+@AUTHOR Patrick Meng & Adam Zalepa
+
+@NODE Main "Witaj w Symphonie 2.4h"
+@{U}                                                                             @{UU}
+
+              Witaj w @{B}Symphonie@{UB} 2.4h -- © 1993-1997 Patrick Meng.
+
+@{U}                                                                             @{UU}
+
+			      @{"   Wprowadzenie  " LINK Introduction}
+			      @{" Prawa autorskie " LINK Copyright}
+			      @{"      Autor      " LINK Address}
+
+			      @{"    Instalacja   " LINK Installation}
+			      @{"       Menu      " LINK Menus}
+			      @{"       Okna      " LINK Windows}
+			      @{"    Klawiatura   " LINK Keyboard}
+
+			      @{" Jakoôê  dúwiëku " LINK Quality}
+			      @{"     Historia    " LINK History}
+			      @{"  Do  zrobienia  " LINK ToDo}
+			      @{"     Projekty    " LINK Projects}
+
+			      @{"    Zamawianie   " LINK Ordering}
+			      @{"     Muzyka      " LINK MusicMarco}
+@{U}                                                                             @{UU}
+
+                     Przeczytaj najpierw plik "readme.txt"!
+
+                       NOWY ADRES EMAIL: pmeng@vtx.ch
+
+@ENDNODE
+
+@NODE DSPPlugIns "DSP PlugIns."
+@TOC SystemControl
+
+@ENDNODE
+
+@NODE Installation "Instalacja."
+@TOC Main
+Instalacja typu "przeciâgnij i opuôê"
+
+
+Skopiuj caîy katalog Symphonie
+w wybrane przez Ciebie miejsce.
+
+Nic poza tym nie musisz zrobiê.
+
+
+Zwróê uwagë, ûe:
+--------------------------------------------
+Symphonie potrzebuje, aby przypisania:
+
+  envarc:
+  t:
+
+byîy aktywne.
+
+Sâ one automatycznie montowane
+przy îadowaniu systemu.
+@ENDNODE
+
+@NODE Quality "Jakoôê dúwiëku"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                   O @{B}Symphonie@{UB}.
+@{U}                                                                             @{UU}
+
+- Muzyka @{B}Symphonie@{UB} zajmuje w duûym stopniu procesor.
+- @{B}Symphonie@{UB} to program, opierajâcy swoje dziaîanie na samplach. Jednak
+  duûe znaczenie ma uûywana iloôê kanaîów dúwiëku.
+
+@{U}                                                                             @{UU}
+
+                                    Resync
+@{U}                                                                             @{UU}
+
+Aby od nowa zsynchronizowaê system, zmieï czëstotliwoôê miksowania.
+
+@{U}                                                                             @{UU}
+
+                                Czëstotliwoôê
+@{U}                                                                             @{UU}
+
+Maksymalna czëstotliwoôê dúwiëku zaleûy od posiadanego sprzëtu.
+
+Jakoôê dúwiëku tworzonego w czasie rzeczywistym jest uzaleûniona od ukîadów
+dúwiëkowych Twojej Amigi (zaleûy to takûe od DMA).
+
+Monitor             Maks. czëst. miks.  Tryb wyôwietlania
+------------------  ----------------    --------------------------------------
+1084S(15kHz)        4kHz - 28 kHz       Wszystkie
+
+1960/VGA/Multiscan  28kHz - 50 kHz      DblNTSC, DblPAL, MULTISCAN, Euro72
+
+SuperVGA/Multiscan  50kHz i ponad       Tylko po edycji trybów wyswietlania
+				        (np. 31kHz->40kHz (tylko dla 
+                                        doôwiadczonych uûytkowników))
+@{U}                                                                             @{UU}
+
+                             Rozdzielczoôê dúwiëku
+@{U}                                                                             @{UU}
+
+Rozdzielczoôê dûwiëku jest limitowana przez posiadany sprzët. Wysokie 
+czëstotliwoôci dajâ czysty dúwiëk bez zakîóceï.
+
+Amiga (generowanie)     : 16 bitów.
+Amiga (w czasie rzecz.) : 9/14 bitów (bez karty dúwiëkowej).
+
+W trybie generowania wyjôciowa rozdzielczoôê moûe mieê wartoôê 8 lub 16
+bitów.
+
+@{U}                                                                             @{UU}
+
+                       Jak uzyskaê najlepsze rezultaty?
+@{U}                                                                             @{UU}
+
+1. Uûywaj sampli dobrej jakoôci.
+   - Uûywaj tylko najlepszych.
+   - Czëstotliwoôê sampli > 40 kHz.
+   - Najlepiej dodatkowo przystosuj sample.
+   - 16 bitów.
+
+2. Jeûeli uûywasz sampli 8-bitowych, uûyj funkcji DOWNSAMPLE.
+
+3. Aby uzyskaê wyûsze czëstotliwoôci odtwarzania, uûyj trybów wyôwietlania
+   MULTISCAN.
+
+@{U}                                                                             @{UU}
+
+                                Wyjôcie dúwiëku
+@{U}                                                                             @{UU}
+
+Aktualne wyjôcie dúwiëku jest limitowane posiadanym sprzëtem, ale moûe byê
+polepszone przez doîâczenie odpowiedniego sprzëtu.
+
+@{B}Symphonie@{UB} Wewnëtrzna jakoôê         : Maks. ok. 16-64 bity	(sound depending)
+@{B}Symphonie@{UB} @{I}Jr@{UI}      Jakoôê   : Maks. 14 bitow		(zakres dynamiki 84 dB)
+@{B}Symphonie@{UB} @{I}Pro@{UI}     Jakoôê   : Maks. 16 bitów		(zakres dynamiki 96 dB)
+
+Standardowe ukîady dúwiëkowe Amigi generujâ cichy szum, podobny do szumu
+np. stacji dysków. Jeûeli wiëc chcesz stworzyê NAPRAWDË profesjonalny
+materiaî, musisz uûyê odpowiedniego sprzëtu (karty dúwiëkowe) lub uûyê
+funkcji generowania dúwiëku,
+  
+@{U}                                                                             @{UU}
+
+                                 Problemy i sztuczki
+@{U}                                                                             @{UU}
+
+Wysoka jakoôê:
+
+Poniewaû miksowanie czëstotliwoôci powyûej 30 kHz jest problematyczne, moûna
+zmniejszyê obciâûenie procesora: tryby dúwiëku LEWY, PRAWY.
+
+Zamiast sygnaîu stereofonicznego, jest wtedy gererowany sygnaî monofoniczny.
+                                       
+Szum:
+
+Przyczyna: D/A Convertor standardowych ukîadów dúwiëkowych ma zbyt niskâ
+           rozdzielczoôê.
+Rada     : Kup 16-bitowâ lub lepszâ kartë dúwiëkowâ.
+
+Przyczyna: Sample majâ zbyt niskâ rozdzielczoôê.
+Rada     : Kup 16-bitowâ kartë dúwiëkowâ.
+
+
+Quantisizing noise:
+
+Przyczyna: Sprzëtowy D/A Convertor ma zbyt niskâ rozdzielczoôê.
+Rada     : Kup 16-bitowâ lub lepszâ kartë dúwiëkowâ
+
+Problem	 : Sample brzmiâ metalicznie we wszystkich czëstotliwoôciach
+Przyczyna: Czëstotliwoôê miksowania jest zbyt niska.
+Rada     : Zwiëksz czëstotliwoôê miksowania.
+
+Problem	 : Niektóre sample brzmiâ metalicznie, inne brzmiâ dobrze.
+Rada     : Uûyj opcji "Downsample" na metalicznie brzmiâcych samplach  (Instrument/D).
+
+Gîówna
+rada     : Zwiëksz oversample (MENU:Prefs/S. Preprocessor/Oversample).
+
+Problem	 : Wiele sampli brzmi metalicznie podczas odtwarzania w okreôlonych czëstotliwoôciach.
+Przyczyna: Czëstotliwoôê sampli jest zbyt niska.
+Rada     : Uûyj opcji "Downsample" na tych samplach (Instrument/D) i podnieô nutë o jednâ oktawë.
+
+@ENDNODE
+
+
+@NODE ViRT "WiRTualne instrumenty."
+@TOC Main
+@{U}                                                                             @{UU}
+
+                          WiRTualne instrumnenty (ViRT)
+@{U}                                                                             @{UU}
+
+WiRTualny instrument jest tworzony przez funkcjë Wavetable Synthesis.
+
+Korzyôci z uûywania WiRTualnych sampli:
+
+- Nie potrzebujesz miejsca na dysku, gdyû sâ one automatycznie przeliczane
+  podczas îadowania pliku SymSONG lub SymMOD.
+
+- Moûesz stosowaê je do:
+
+  1. Tworzenia sampli-akordów (lepsze rezultaty moûna uzyskaê uûywajâc
+     zsamplowanych akordow).
+  2. Tworzenia sampli mieszanych (np. Hihat i BassDrum w 1 samplu).
+  3. Redukowania wielokrotnych ôcieûek do 1.
+  4. Filtrowania sampli, odtwarzania sampli wstecz, tworzenia chorus'u
+     (czyli efektu "chóru").
+  5. Tworzenia skomplikowanych efektów specjalnych.
+  6. Zwiëkszania jakoôci sampli (funkcja "DownSample").
+
+Aby stworzyê WiRTualny sampl, instrukenty. które majâ byê uûyte, muszâ byê
+wpisane w pattern:
+
+  1. Nuta
+     np. C-4 001+0 (C-4, instrument 1, gîoônoôê 100%).
+  2. Nuta z efektem PitchUp lub PitchDown.
+
+@{U}                                                                             @{UU}
+
+Oto aktualne 4 rodzaje WiRTualnych instrumentów:
+
+MIX		Funkcja : Funkcja MIX jest uûywana do mieszania wielu sampli
+                          w 1 samplu. Wszystkie sample z tego samego rzëdu
+                          od pozycji kursora do koïca sâ mieszane razem.
+                          Dîugoôê i czestotliwoôê wyjôciowego sampla sâ takie
+                          same, jak sampla w pozycji kursora.
+                NOTATKA : Kiedy uûywany jest tylko 1 sampl, wywoîywana jest
+                          funkcja REMIX.
+                UWAGI   : Aby gîoônoôci sampli byîy zgodne, ustal wszystkie
+                          na 100.
+
+REMIX		Funkcja : Funkcja ta tworzy wirtualnâ kopië aktualnego sampla.
+		NOTATKA	: Nastëpny instrukment zostanie zastâpiony, z powodu
+                          niedokîadnoôci obliczeï wirtualnego sampla.
+
+QUE		Funkcja : QUE tworzy sampl ze ôcieûki. Czëstotliwoôê nowego
+                          sampla bëdzie taka sama, jak czëstotliwoôê sampla
+                          w pozycji kursora.
+		NOTATKA	: Kiedy uzywany jest tylko 1 sampl, wywoîywana jest
+                          funkcja REMIX.
+                UWAGI   : Aby gîoônoôci sampli byîy zgodne, ustal wszystkie
+                          na 100.
+
+TRANS		Funkcja : Tworzy nowy sampl, który pîynnie zmienia sië z 1
+                          na inny (10 cykli)
+		NOTATKA	: Zalecane sâ sample krótko zapëtlane. Po stworzeniu
+                          nowego sampla, pëtle sâ zmieniane.
+
+@ENDNODE
+
+
+@NODE Rendering "Generowanie dúwiëku."
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                Generowanie dúwiëku
+@{U}                                                                             @{UU}
+
+Aby uruchomiê proces generowania, naleûy nacisnâê klawisz RENDER. Wyjôciowy
+dúwiëk bëdzie skierowany na plik. Czëstotliwoôê jest taka sama jak@{"czëstotliwoôê" LINK SystemControl}
+systemowa. Scieûki MUTEed nie sâ generowane. Efekty DSP sâ aktywne podczas
+generowania.
+
+Moûna korzystaê wyîâcznie z klawisza @{"STOP" LINK SystemControl}. Jest to
+jedyna sposób zatrzymania generowaia. Kiedy utwór sië skoïczy, generowanie
+automatycznie takûe zatrzyma sië.
+
+Krótkie pliki mogâ byê uûyte jako sample.
+
+@{U}                                                                             @{UU}
+
+RENDER		Funkcja : Rozpoczëcie generowania.
+
+8		Funkcja : Ustalenie trybu 8-bitowego.
+
+16		Funkcja : Ustalenie trybu 16-bitowego.
+
+M		Funkcja : Ustalenie trybu monofonicznego.
+
+S		Funkcja : Ustalenie trybu stereofonicznego.
+
+PC		Funkcja : Format Intel.
+
+HQ		Funkcja : Tryb wysokiej jakoôci.
+		NOTATKA	: 50% wolniej, ale lepsza jakoôê.
+                          Dziaîa takûe w czasie rzeczywistym.
+			  Nie ukoïczona caîkowicie funkcja.
+
+A		Antialias : funkcje OBSOLETE, REMOVE
+                -> Uûyj funkcji DSP : "LP Filter"
+		
+
+RAW		Funkcja : Zapis jako dane RAW (Motorola lub Intel)
+
+MAES		Funkcja : Zapis jako format Maestro. (Motorola)
+
+WAV		Funkcja : Zapis jako format Wave (Intel)
+
+MAUD		Funkcja : Zapisz jako 16-bitowy IFF. (Motorola)
+
+@ENDNODE
+
+
+@NODE IntMO "Sposób zapîaty miëdzynarodowymi walutami"
+@TOC Ordering
+
+Przeôlij pieniâdze na nastëpujâce konto bankowe:
+
+	BIC (Kod bankowy)	-	LUKB CH 2260A
+	Konto nr	        -	01-08-303019-00 HORW
+	Imië i nazwisko         -	PATRICK MENG
+
+	(USA: za poôrednictwem Citibank NY)
+
+@ENDNODE
+
+
+@NODE Cash "Sposób zapîaty w gotówce"
+@TOC Ordering
+
+Przeôlij pieniâdze na adres:
+
+	Patrick Meng
+	Rosenfeldweg 4
+	CH-6048 Horw
+	Switzerland
+
+@ENDNODE
+
+
+@NODE Introduction "Wprowadzenie do Symphonie"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                         Wprowadzenie do @{B}Symphonie@{UB}.
+@{U}                                                                             @{UU}
+
+@{B}Symphonie@{UB} jest programem posiadajâcym nowe algorytmy dúwiëku, ktore 
+pozwalajâ komponowaê muzykë o wysokiej jakoôci. Posiadany sprzët jest wspomagany
+przez uûywanie funkcji generowania dúwiëku (np. dla 16-bitowych kart dúwiëkowych).
+
+Wszystkie moduîy skomponowane przez @{B}Symphonie@{UB} sâ dostosowywane
+przez program do posiadanego sprzëtu (jakoôê dúwiëku, czëstotliwoôê, szybkoôê
+procesora).
+
+@{B}Symphonie@{UB} dziaîa w 100% NIE destrukcyjne.
+- Oryginalne dane nie sâ zmieniane przez operacje na samplach.
+- Sample sa zapamiëtywane w moduîach @{B}Symphonie@{UB} niezmienione. Pozostajâ
+  wiëc takie same, jak oryginalne dane na twardym dysku kompozytora.
+
+System posiada ponadto nastëpujâce cechy:
+
+- Pliki SymMOD sâ w 100% niezaleûne od sprzëtu.
+- @{B}Symphonie@{UB} pozwala tworzyê produkcje DDD (w peîni cyfrowe produkcje przy 
+  minimalnych kosztach)
+  Na przykîad:
+  - Komponowanie przy uûyciu @{B}Symphonie@{UB}.
+  - Eksport (generowanie dúwiëku nie w czasie rzeczywistym, 16 bitów, 48 kHz).
+  - Póúniejsza edycja przy uûyciu odpowiedniego oprogramowania.
+
+- Moduîy Symphonie (SymMOD) mogâ byê konwertowane na preferowane platformy.
+- Moduîy skomponowane przy uûyciu 16-bitowych sampli w 8-bitowym trybie pracy 
+  @{B}Symphonie@{UB}, odtwarzane na w 16-bitowym trybie pracy bëdâ brzmiaîy
+  tak, jakby byîy komponowane w 16-bitowym trybie pracy.
+
+Wymagania sprzëtowe @{B}Symphonie@{UB}:
+
+	Procesor MC680EC20 lub lepszy
+	4 MB pamieci
+
+Wymagania programowe @{B}Symphonie@{UB}:
+
+	OS 3.0 lub wyûszy
+	reqtools.library (autorzy: Nico Francois i Magnus Holmgren)
+
+Zalecane:
+
+	Procesor MC68030/50Mhz lub lepszy
+	Twardy dysk
+
+	@{B}Symphonie@{UB} @{I}Jr@{UI}	: 16 MB pamiëci Fast
+	@{B}Symphonie@{UB} @{I}Pro@{UI}	: 32 MB pamiëci Fast
+
+@{U}                                                                             @{UU}
+
+                            Informacje techniczne
+@{U}                                                                             @{UU}
+
+Program @{B}Symphonie@{UB} zostaî napisany caîkowicie w assemblerze MC68020.
+
+Wewnëtrznie program jest zorientowany obiektowo. Jest to gîównie widoczne
+w maîej dîugoôci programu.
+
+Gîówne procedury zostaîy zoptymalizowane.
+
+@{U}                                                                             @{UU}
+
+                         Informacje o @{B}Symphonie@{UB}:
+@{U}                                                                             @{UU}
+
+- Maksymalna iloôê kanaîów monofonicznych: 256 (128 kanaîów stereofonicznych)
+
+- Rozdzielczoôê gîoônoôci	     :	16 bitów
+- Rozdzielczoôê czëstotliwoôci	     :	32 bity
+- Procesor sampli                    :	16 bitów
+- Procesor sampli wirtualnych (ViRT) :	16 bitów
+
+- 2-fazowy Oversampling
+- Programowe DSP
+
+WEJÔCIE: (Sample)
+
+- Rozdzielczoôê sampli  	:	8/16 bitów
+- Czëstotliwoôê samplingu       :	10 kHz - ok. 100 kHz
+
+WYJÔCIE: (Wyjôcie dúwiëku)
+
+- Rozdzielczoôê sampli	        :	9/14 bitów (Amiga bez karty dúwiëkowej)
+- Czëstotliwoôê miksowania      :	10 kHz - 50 kHz (Amiga bez karty dúwiëkowej)
+
+
+GENEROWANIE DÚWIËKU: (nie w czasie rzeczywistym)
+
+- Rozdzielczoôê sampli	        :	8/16 bitów
+- Czëstotliwoôê miksowania	:	5 kHz - ok. 250 kHz
+
+
+Maks. 128 sampli * Maks. objëtoôê jednego sampla 2 MB (sample 8-bitowe, 
+Preoversampling=1) = Maks. 0.25GB materiaîu sampli dla jednego utworu.
+
+(Wewnetrznie: Maksymalna dîugoôê sampli 4 MB)
+
+@ENDNODE
+
+
+@NODE Copyright "Prawa autorskie"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                              Prawa autorskie
+@{U}                                                                             @{UU}
+
+@{B}Symphonie@{UB} (C) by Patrick Meng 1993-97 - All rights reserved
+@{B}Symphonie@{UB} File Format (C) by Patrick Meng 1993-97 - All rights reserved
+
+@{"SoundFX" LINK AboutSFX} (C) Copyright 1993-1997 Stefan Kost - All Rights Reserved
+
+Próby rozkodowania @{B}Symphonie@{UB} lub formatu @{B}Symphonie@{UB} sâ zabronione.
+
+@{B}Symphonie@{UB} @{I}Player@{UI} jest FREEWARE. (FD Player)
+@{B}Symphonie@{UB} @{I}Player Pro@{UI} jest FREEWARE. (FD Player)
+
+@{I}FREE@{UI} @{B}Symphonie@{UB} jest prawie FD (C) by Patrick Meng (nie do celów
+komercyjnych)
+@{B}Symphonie@{UB} @{I}SHARE@{UI} NIE jest FD, NIE jest FREEWARE,  (C) by Patrick Meng 
+@{B}Symphonie@{UB} @{I}SE@{UI} (C) by Patrick Meng (dystrubutorzy mogâ ubiegaê sië
+o zezwolenia)
+@{B}Symphonie@{UB} @{I}Jr@{UI} (C) by Patrick Meng 
+@{B}Symphonie@{UB} @{I}Pro@{UI} (C) by Patrick Meng
+@{B}Symphonie.guide@{UB} (C) by Patrick Meng
+
+
+@{U}                                                                             @{UU}
+
+                         Specjalne podziëkowania dla:
+@{U}                                                                             @{UU}
+
+
+Michel Vissers    (za SZYBKIE i DOBRE angielskie tîumaczenie dokumentacji)
+Jonas Österberg   (swedish guide, mailto: drkoss@thepentagon.com)
+Adam Zalepa       (polish guide, mailto: expert@polbox.com)
+
+@{U}                                                                             @{UU}
+
+                                    Uwagi.
+@{U}                                                                             @{UU}
+
+Autor @{B}Symphonie@{UB} nie ponosi ûadnej odpowiedzialnoôci za ewentualne 
+zniszczenia wynikajâce z uûywania programu.
+
+@{U}                                                                             @{UU}
+
+                                   Licencja.
+@{U}                                                                             @{UU}
+
+Udzielone licencje na @{B}Symphonie@{UB} @{I}SE@{UI}:
+
+- Aminet Organisation            (Aminet CD nr 12)
+- Amiga User Group Switzerland   (dysk klubowy czerwiec/lipiec 96)
+
+@ENDNODE
+
+
+@NODE Address "Jak skontaktowaê sië ze mnâ"
+@TOC Main
+
+                               Autor @{B}Symphonie@{UB}
+
+                              RealTime Software
+
+                                 Patrick Meng
+                                Rosenfeldweg 4
+                                  6048 Horw
+                                 Switzerland
+
+                               +41 41 340 6948
+
+
+                          NOWY EMAIL: pmeng@vtx.ch
+
+
+
+
+                      Autor @{B}polskiej wersji dokumentacji@{UB}
+
+                                 Adam Zalepa
+                            ul. Marysiïska 82/84 m5
+                             91-850 Îódú Poland
+
+                               +48 42 57 31 78
+
+                     EMAIL: expert@polbox.com
+                     WWW  : http://www.polbox.com/e/expert
+
+@ENDNODE
+
+
+@NODE Menus "Menu"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                     Menu
+@{U}                                                                             @{UU}
+
+				   @{"   ?    " LINK Menu_About}
+				   @{" System " LINK Menu_System}
+				   @{"  File  " LINK Menu_File}
+				   @{"  Edit  " LINK Menu_Edit}
+				   @{"  Move  " LINK Menu_Move}
+				   @{" Sample " LINK Menu_Sample}
+				   @{"  Prefs " LINK Menu_Prefs}
+
+@ENDNODE
+
+@NODE Menu_About "Menu informacyjne"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                              Menu informacyjne
+@{U}                                                                             @{UU}
+
+@{B}About @{B}Symphonie@{UB}@{UB}
+
+    Funkcja            : Pokazuje okno informacyjne.
+    Skrót klawiaturowy : AMIGA-?.
+
+@{B}Song info@{UB}
+
+    Funkcja            : Pokazuje informacje o utworze.
+    Skrót klawiaturowy : AMIGA-!.
+
+@ENDNODE
+
+@NODE Menu_System "Menu SYSTEM"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                Menu "System"
+@{U}                                                                             @{UU}
+
+@{B}Player/Song@{UB}
+
+    Funkcja            : Odtwarza caîy utwór.
+    Skrót klawiaturowy : F5.
+
+@{B}Player/Sequence@{UB}
+
+    Funkcja            : Odtwarza sekwencjë.
+    Skrót klawiaturowy : F4
+
+@{B}Player/Position@{UB}
+
+    Funkcja            : Odtwarza utwór od aktualnej pozycji do koïca.
+    Skrót klawiaturowy : F3
+
+@{B}Player/Pattern@{UB}
+
+    Funkcja            : Odtwarza aktualny pattern.
+    Skrót klawiaturowy : F2
+
+@{B}Player/Track@{UB}
+
+    Funkcja            : Odtwarza aktualnâ ôcieûkë.
+
+@{B}Player/Stop@{UB}
+
+    Funkcja            : Przerywa odtwarzanie.
+    Skrót klawiaturowy : ECS
+
+
+
+@{B}Audio Mode/Oversample 9BT@{UB}
+
+    Funkcja :	Oversampling Stereo 9-bitów.
+    NOTATKA :	Kiedy oversampling jest uûywany, zajëtoôê procesora dochodzi 
+                do 30-40%. To jednak zmniejsza czëstotliwoôê.
+
+@{B}Audio Mode/Stereo 9BT@{UB}
+
+    Funkcja :	Stereo 9-bitów.
+
+@{B}Audio Mode/Oversample@{UB}
+
+    Funkcja :	Oversampling Stereo 14-bitów.
+    NOTATKA :	Kiedy oversampling jesy uûywany, zajëtoôê procesora dochodzi 
+                do 30-40%. To jednak zmniejsza czëstotliwoôê.
+
+@{B}Audio Mode/Stereo@{UB}
+
+    Funkcja :	Stereo 14-bitów
+    NOTATKA :	14-bitowy tryb jest tworzony przez uûycie 2 kanaîów dúwiëku
+                do stworzenia 1.
+
+@{B}Audio Mode/Mono@{UB}
+
+    Funkcja :	Mono 14-bitów.
+    NOTATKA :	14-bitowy tryb jest tworzony przez uûycie 2 kanaîów dúwiëku
+                do stworzenia 1
+
+@{B}Audio Mode/Mono Surround@{UB}
+
+    Funkcja :	Mono 14-bitów i wîâcza tryb Surround
+    NOTATKA :	Tworzony jest sztuczny stereofoniczny sygnaî z sygnaîu
+		monofonicznego.
+
+@{B}Audio Mode/Left@{UB}
+
+    Funkcja:	14-bitowy lewy kanaî dúwiëku.
+
+@{B}Audio Mode/Right@{UB}
+
+    Funkcja:	14-bitowy prawy kanaî dúwiëku.
+
+
+
+@{B}DSP/Deactivate@{UB}
+
+    Funkcja            : Wyîâcza wszystkie efekty DSP.
+    Skrót klawiaturowy : AMIGA-D.
+
+@{B}DSP/Echo@{UB}
+
+    Funkcja            : W(y)îacza Echo. Oryginalny sygnaî jest mieszany
+                         ze zmienialnym opóúnieniem i gîoônoôciâ.
+
+@{B}DSP/CrossEcho@{UB}
+
+    Funkcja:	W(y)îacza CrossEcho. Na lewym kanale bëdzie echo prawego
+                kanaîu i odwrotnie.
+
+@{B}DSP/LP Filter@{UB}
+
+    Funkcja:	Sygnaî Postfiltr Echo.
+
+@{B}DSP/Delay@{UB}
+
+    Funkcja:    W(y)îâcza opóúnienie (Delay). Oryginalny sygnaî jest mieszany 
+                ze zmienialnym opóúnieniem i gîoônoôciâ.
+
+@{B}DSP/CrDelay@{UB}
+
+    Funkcja:	W(y)îacza CrDelay. Na lewym kanale bëdzie echo prawego
+                kanaîu i odwrotnie.
+    NOTATKA:	Opóúnienie (Delay) =0 w trybie monofonicznym.
+
+@{B}DSP/Hall@{UB}
+
+    Funkcja   : W(y)îâcza Hall.
+    Ustawienia:	Opóûnienie      - System/Delay -> Dîugoôê.
+		Gîoônoôê efektu - System/Delay -> Poziom.
+		Dîugoôê efektu  - System/Hall  -> Dîugoôê.
+		Feedback efektu - System/Hall  -> Poziom.
+    NOTATKA   :	Dîugoôê opóúnienia < opóúnienia efektu "halowego" !!
+
+@{B}DSP/CrHall@{UB}
+
+    Funkcja:    Wîâcza CrHall.
+
+@{B}DSP/LP Filter@{UB}
+
+    Funkcja:	Postfiltr efektu "halowego"/opóúnienia.
+
+
+@{B}Quit@{UB}
+
+    Funkcja            : Wychodzi z @{B}Symphonie@{UB}.
+    Skrót klawiaturowy : AMIGA-Q.
+
+@ENDNODE
+
+@NODE menu_File "Menu FILE"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                Menu "File"
+@{U}                                                                             @{UU}
+
+@{B}Song/Load@{UB}
+
+    Funkcja            : Wczytuje plik SymSONG.
+    Skrót klawiaturowy : AMIGA-L.
+
+@{B}Song/Save As@{UB}
+
+    Funkcja            : Zapisuje plik SymSONG pytajâc o jego nazwë.
+    Skrót klawiaturowy : AMIGA-S.
+
+@{B}Song/Save@{UB}
+
+    Funkcja            : Zapisuje plik SymSONG pod aktualnâ nazwâ.
+
+@{B}Module/Load@{UB}
+
+    Funkcja            : Wczytuje plik SymMOD.
+    Skrót klawiaturowy : AMIGA-M.
+
+@{B}Module/Save As@{UB}
+
+    Funkcja            : Zapisuje plik SymMOD pytajâc o jego nazwë.
+
+@{B}Module/DiZCript@{UB}
+
+    Funkcja            : Doîâcza do moduîu plik tekstowy, który bëdzie
+                         wyôwietlany po rozpoczëciu odtwarzania moduîu.
+    NOTATKA            : Nie moûna uûywaê ûadnych specjalnych znaków,
+                         oprócz <RETURN>
+
+@{B}Module/Extract Samples@{UB}
+
+    Funkcja            : Kopiuje sample z aktualnego moduîu do katalogu T:.
+
+@{B}Module/Extract 8 bit@{UB}
+
+    Funkcja            : Kopiuje sample do katalogu T: i konwertuje je na
+                         8-bitów.
+
+@{B}Module/Extract Quality@{UB}
+
+    Funkcja            : Ustala jakoôê konwersji.
+
+
+
+@{B}Prefs/Load@{UB}
+
+    Funkcja            : Wczytuje preferencje.
+
+@{B}Prefs/Save As@{UB}
+
+    Funkcja            : Zapisuje preferencje pytajâc o nazwë pliku.
+
+@{B}Prefs/Save Default@{UB}
+
+    Funkcja            : Zapisuje preferencje jako poczâtkowe.
+
+@{B}Prefs/No Audio@{UB}
+
+    Funkcja            : Nie zapisuje preferencji dúwiëku.
+    Przykîad           : Prefs/S Preprocessor/Set SampleBoost, stereo.
+
+@{B}Prefs/No Video@{UB}
+
+    Funkcja            : Nie zapisuje preferencji interfejsu uûytkownika (GUI).
+    Przykîad           : Pozycje okna.
+
+@{B}Prefs/No Song Setup@{UB}
+
+    Funkcja            : Nie zapisuje ustawieï utworu.
+    Przykîad           : Iloôê kanaîów.
+
+
+
+@{B}Pack/Song@{UB}
+
+    Funkcja            : W(y)îâcza kompresji utworu.
+
+@{B}Pack/Samples@{UB}
+
+    Funkcja            : W(y)îâcza kompresjë sampli.
+    NOTATKA            : Kompresja sampli jest uûywana, aby uzyskaê lepsze
+                         rezultaty przy pakowaniu moduîu np. LHA, Power
+                         Packer'em lub za poôrednictwem bibliotek XPK.
+
+@ENDNODE
+
+@NODE Menu_Edit "Menu EDIT"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                 Menu "Edit"
+@{U}                                                                             @{UU}
+
+@{B}Sequence/Cut@{UB}
+
+    Funkcja   : Wycina wybranâ czëôê i zapamiëtuje jâ w buforze.   
+
+@{B}Sequence/Copy@{UB}
+
+    Funkcja   : Kopiuje wybranâ czëôê do bufora.
+
+@{B}Sequence/Paste@{UB}
+
+    Funkcja   : Wstawia zawartoôê bufora do aktualnej pozycji.
+
+
+
+@{B}Position/Cut,Copy&Paste@{UB}
+
+    Funkcja   : Patrz Sequence/Cut, Copy i Paste.
+
+
+
+@{B}Pattern/Cut,Copy&Paste@{UB}
+
+    Funkcja   :	Patrz Sequence/Cut, Copy i Paste.
+
+@{B}Pattern/Duplen@{UB}
+
+    Function:	
+
+@{B}Pattern/Shrink@{UB}
+
+    Funkcja   : Kasuje nutë wystëpujâcâ co sekundë.
+
+@{B}Pattern/Expand@{UB}
+
+    Funkcja   : Wstawia pustâ nutë po kaûdej pozycji.
+
+@{B}Pattern/Duplicate@{UB}
+
+    Funkcja   : Kopiuje aktualny pattern do nastëpnego.
+
+
+
+@{B}Track/Cut,Copy&Paste@{UB}
+
+    Funkcja   :	Patrz Sequence/Cut, Copy i Paste.
+
+@{B}Track/Mirror@{UB}
+
+    Funkcja   : Odwraca aktualnâ ôcieûkë.
+
+@{B}Track/Swap Buf@{UB}
+
+    Funkcja   : Zamienia zawartoôê aktualnej ôcieûki z buforem.
+
+@{B}Track/Rot Up@{UB}
+
+    Funkcja   : Przesuwa zawartoôê aktualnej ôcieûki do góry.
+
+@{B}Track/Rot Down@{UB}
+
+    Funkcjë   : Przesuwa zawartoôê aktualnej ôcieûki na dóî.
+
+
+
+@{B}Block/Cut-Copy-Paste@{UB}
+
+    Funkcja   :	Patrz Sequence/Cut, Copy i Paste.
+
+@{B}Block/Add@{UB}
+
+    Funkcja   : Dodaje blok.
+
+@{B}Block/Expand@{UB}
+
+    Funkcja   : Rozszerza blok.
+
+@{B}Block/Clear@{UB}
+
+    Funkcja   : Czyôci blok.
+
+@{B}Block/Swap@{UB}
+
+    Funkcja   : Zamienia zawartoôê bloku z buforem.
+
+
+
+@{B}Note/Cut,Copy&Paste@{UB}
+
+    Funkcja   :	Patrz Sequence/Cut, Copy i Paste.
+
+@{B}Note/Insert@{UB}
+
+    Funkcja   : Wstawia pustâ nutë.
+
+@{B}Note/Delete@{UB}
+
+    Funkcja   : Kasuje aktualnâ nutë.
+
+
+
+@{B}Macro/Record@{UB}
+
+    Funkcja   :	Wîâcza zapis dzialaï.
+    NOTATKA   :	Zapisuje dziaîania takie jak: klawiatura, menu i gadgety. Stan
+                klawisza <SHIFT> jest takûe zapisywany.
+
+@{B}Macro/Replay@{UB}
+
+    Funkcja   : "Odtwarza" zapisanâ listë dziaîaï.
+
+
+
+@{B}Undo@{UB}
+
+    Funkcja   : Kasuje ostatniâ zmianë.
+
+@ENDNODE
+
+@NODE Menu_Move "Menu MOVE"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                 Menu "Move"
+@{U}                                                                             @{UU}
+
+@{B}Sequence/Previous@{UB}
+
+    Funkcja   : Skacze do poprzedniej sekwencji.
+
+@{B}Sequence/Next@{UB}
+
+    Funkcja   : Skacze do nastëpnej sekwencji.
+
+@{B}Sequence/First@{UB}
+
+    Funkcja   : Skacze do pierwszej sekwencji.
+
+@{B}Sequence/Last@{UB}
+
+    Funkcja   : Skacze do ostatniej sekwencji.
+
+
+
+@{B}Position/Previous@{UB}
+
+    Funkcja   : Skacze do poprzedniej pozycji.
+
+@{B}Position/Next@{UB}
+
+    Funkcja   : Skacze do nastëpnej pozycji.
+
+@{B}Position/First@{UB}
+
+    Funkcja   : Skacze do pierwszej pozycji.
+
+@{B}Position/Last@{UB}
+
+    Funkcja   : Skacze do ostaniej pozycji.
+
+
+
+@{B}Pattern/Previous@{UB}
+
+    Funkcja   : Skacze do poprzedniego patternu.
+
+@{B}Pattern/Next@{UB}
+
+    Funkcja   : Skacze do nastëpnego patternu.
+
+@{B}Pattern/First@{UB}
+
+    Funkcja   : Skacze do pierwszego patternu.
+
+@{B}Pattern/Last@{UB}
+
+    Funkcja   : Skacze do ostatniego patternu.
+
+
+
+@{B}Crsr/Previous@{UB}
+
+    Funkcja   : Skacze do poprzedniej pozycji kursora.
+
+@{B}Crsr/Next@{UB}
+
+    Funkcja   : Skacze do nastëpnej pozycji kursora.
+
+@{B}Crsr/First@{UB}
+
+    Funkcja   : Skacze do pierwszej pozycji kursora.
+
+@{B}Crsr/Last@{UB}
+
+    Funkcja   : Skacze do ostatniej pozycji kursora.
+
+@ENDNODE
+
+@NODE Menu_Sample "Menu SAMPLE"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                Menu "Sample"
+@{U}                                                                             @{UU}
+
+@{B}Load@{UB}
+
+    Funkcja   : Wczytuje sampla (próbkë dúwiëku).
+    NOWE      : Jeûeli chcesz zmieniê nazwë sampla, przytrzymaj <SHIFT>.
+
+
+
+@{B}Bank/Load@{UB}
+
+    Funkcja   : Wczytuje bank sampli.
+
+@{B}Bank/Save As@{UB}
+
+    Funkcja   : Zapisuje bank sampli.
+
+
+
+@{B}Remove@{UB}
+
+    Funkcja   : Kasuje aktualny sampl.
+
+
+
+@{B}Virtual/MIX@{UB}
+
+    Funkcja   : Tworzy instrument MIX.
+
+@{B}Virtual/QUEUE@{UB}
+
+    Funkcja   : Tworzy instrument QUEUE.
+
+@{B}Virtual/REMIX@{UB}
+
+    Funkcja   : Tworzy instrument REMIX.
+
+@{B}Virtual/TRANSWAVE@{UB}
+
+    Funkcja   : Tworzy instrument TRANSWAVE.
+
+@{B}Virtual/Recalc@{UB}
+
+    Funkcja   : Przelicza ponownie wszystkie wirtualnej (ViRT) sample.
+
+
+
+@{B}Support/Adjust Path@{UB}
+
+    Funkcja   : Zmienia ôcieûkë dostëpu wszystkich sampli.
+
+@{B}Support/Reload All@{UB}
+
+    Funkcja   : Wczytuje ponownie wczystkie sample, przelicza wszystkie
+                wirtualne (ViRT) instrumenty.
+
+@ENDNODE
+
+@NODE Menu_Prefs "Menu PREFS"
+@TOC Menus
+@{U}                                                                             @{UU}
+
+                                   Menu "Prefs"
+@{U}                                                                             @{UU}
+
+@{B}System/System Buffer@{UB}
+
+    Funkcja     : Iloôê buforów dla wielobuforowego systemu @{B}Symphonie@{UB}
+    Zakres      : 4..8
+    Standardowo : 4
+    Przykîad    : testowanie sampli  - 4
+		  odtwarzanie utworu - 8
+
+@{B}System/DSP Buffer@{UB}
+
+    Funkcja     : Maksymalnailoôê buforów DSP.
+    Zakres      : 1..255
+    Standardowo : 15
+
+@{B}System/Render Buffer@{UB}
+
+    Funkcja     : Maksymalna iloôê buforow dla generowania dúwiëku.
+    Zakres      : 8k..2MB
+    Standardowo : 16k
+
+@{B}System/Set Max Proc Vol@{UB}
+
+    Funkcja     : Maksymalna gîoônoôê.
+    Zakes       : 1..99
+    Standardowo : 74
+    Przykîad    : SMPV=74 - wszystkie sample o gîoônoôci 75-100% sâ odtwarzane z gîoônoôciâ 100%
+		  SMPV=49 - wszystkie sample o gîoônoôci 50-100% sâ odtwarzane z gîoônoôciâ 100%
+		  SMPV=99 - wszystkie sample sâ odtwarzane z oryginalnâ gîoônoôciâ.
+				   
+
+
+@{B}RealTime/Pos Change@{UB}
+
+    Funkcja     : W(y)îâcza odôwieûanie numerów pozycji i patternów.
+
+@{B}RealTime/Scrolling@{UB}
+
+    Funkcja     : W(y)îâcza przesuwanie pozycji w edytorze patternów (kursor
+                  nie przesuwa podczas odtwarzania)  
+
+@{B}RealTime/Spectrum@{UB}
+
+    Funkcja     : W(y)îâcza Spectrum Analyser.
+
+@{B}RealTime/Scope@{UB}
+
+    Funkcja     : W(y)îâcza Sound Scope.
+
+@{B}RealTime/Force Update@{UB}
+
+    Funkcja     : Wîâcza narzëdzia "optyczne" (np. Scope), takûe, kiedy
+                  utwor nie jest odtwarzany.
+
+@{B}RealTime/Win to front@{UB}
+
+    Function:	Pop window to front when activated.
+
+
+
+@{B}PattEd/Set Jump Length@{UB}
+
+    Funkcja     : Ustala iloôê pozycji, jaka ma byê omijana, kiedy zostanie
+                  wpisana nuta.
+
+@{B}PattEd/Pitch@{UB}
+
+    Funkcja     : W(y)îâcza zapis nut.
+
+@{B}PattEd/Instrument@{UB}
+
+    Funkcja     : W(y)îâcza zapis numerów intrumentów.
+
+@{B}PattEd/Volume@{UB}
+
+    Funkcja     : W(y)îâcza zapis gîoônoôci.
+
+
+
+
+@{B}Load Song/Mod/Keep Pattern Number@{UB}
+
+    Funkcja     : Zachowuje aktualnâ iloôê patternów.
+    Przykîad    : Zmiana 64 patternów na 100.
+
+@{B}Load Song/Mod/Convert Song@{UB}
+
+    Funkcja     : Zachowuje aktualnâ informacjë o utworze (np. iloôê
+                  kanaîów, pattenrów) przy wczytywaniu nowego utworu.
+    Przykîad    : Zmiana kanaîów utworu z 8 na 16.
+
+
+
+@{B}S.Preprocessor/Set AntiKnack@{UB}
+
+    Function    : Kasuje zakîócenia na koïcu úle wyedytowanego sampla. Zmienia
+                  dîugoôê wyciszenia. Maîe wartoôci dajâ efekt "twardego"
+                  startu wszystkich sampli. Algorytm Anti-Knack wyîâcza
+                  automatycznie encounters poprawnie wyedytowanych sampli 
+    Zakres      : 1..1024
+    Standardowo : 32
+    NOTATKA     : Ta tunkcja dziaîa wyîâcznie przy wczytywaniu i przeliczaniu 
+                  sampli. Wartoôci 2,4,8,16,32... dajâ najlepsze rezultaty.
+
+
+@{B}S.Preprocessor/Set SampleBoost@{UB}
+
+    Funkcja     : Podbija gîoônoôê wszystkich sampli.
+    Zakres      : 1..200%
+    Standardowo : 100%
+    NOTATKA     : Przy zbyt mocnym podbiciy, funkcja ta, przy uûyciu efektów
+                  DSP, zmniejszy të wartoôê.
+
+@{B}S.Preprocessor/Set Oversample@{UB}
+
+    Funkcja     : Zmniejsza quantisizing szumu niskich czëstotliwoôci sampli.
+    Zakres      : 1..4 dla sampli.
+		  1 = 2x Pre Oversampling.
+		  4 = 16x Pre Oversampling.
+    Standardowo : 1
+    NOTATKA     : Ta funkcja dziaîa wyîâcznie przy wczytywaiu i przeliczaniu sampli.
+
+                Maksymalna objëtoôê sampla, przy uûyciu monofonicznego 
+                8-bitowego sampla, wynosi:
+          
+		Oversample     Objëtoôê	   Maksymalna nuta 
+
+		    1		2 MB		 C-6
+		    2		1 MB		 C-5
+		    3		512 Kb		 C-4
+		    4		256 Kb		 C-3
+
+
+@{B}Stereo Control/Set Sample Diff@{UB}
+
+    Funkcja     : Rozszerza dúwiëk stereofoniczny, przez stworzenie maîej
+                  róûnicy na poczâtkowej pozycji sampli, pomëdzy lewym i
+                  prawym kanaîem.
+    Zakres      : 0..1000 dla sampli.
+    Standardowo : 0
+
+@{B}Stereo Control/Set Pitch Diff@{UB}
+
+    Funkcja     : Rozszerza dúwiëk stereofoniczny, przez stworzenie maîej
+                  róûnicy odtwarzanej czëstotliwoôci sampli, pomiëdzy lewym
+                  i prawym kanaîem.
+    Zakres      : 0..128
+    Standardowo : 0
+
+
+@{B}GUI/Change Look@{UB}
+
+    Funkcja     : Zmienia wyglâd interfejsu uûytkownika (GUI).
+
+@{B}GUI/Change Gadgets@{UB}
+
+    Funkcja     : Zmienia wyglâd gadgetów (dwu- lub trójwymiarowe).
+
+@ENDNODE
+
+
+
+@NODE Windows "Okna"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                   Okna
+@{U}                                                                             @{UU}
+
+
+			     @{"   System Control  " LINK SystemControl}
+			     @{"     Instrument    " LINK Instrument}
+			     @{"       SongEd      " LINK SongEd}
+			     @{"     Pattern Ed    " LINK PatternEd}
+			     @{"       NoteEd      " LINK NoteEd}
+			     @{"       Scope       " LINK Scope}
+			     @{" Spectrum Analyzer " LINK SpectrumAnalyzer}
+			     @{"       Assist      " LINK Assist}
+
+@ENDNODE
+
+
+
+@NODE Assist "Assist."
+@TOC Windows
+Informacje "online".
+@ENDNODE
+
+@NODE SpectrumAnalyzer "Spectrum Analyzer."
+@TOC Windows
+Wystëpujâ 2 warianty:
+
+1. Harmonic Spectrum Analyzer
+2. ColorOrgan
+
+@ENDNODE
+
+@NODE Scope "Scope."
+@TOC Windows
+Pokazuje kierunkowo wykres dúwiëku.
+@ENDNODE
+
+
+@NODE SystemControl "Okno SYSTEM CONTROL"
+@TOC Windows
+@{U}                                                                             @{UU}
+
+                          Okno "System Control"
+@{U}                                                                             @{UU}
+
+VOC		Funkcja : Ustala iloôê kanaîów (restartuje system po wyborze).
+		Zakres	: 8, 16, 32, 64, 128 i 256.
+		NOTATKA	: Wiëksza iloôê kanaîów uniemoûliwia stosowanie 
+                          wysokich czëstotliwoôci miksowania:
+			  - 8 kanaîów = maks. 13 bitów na wyjôciu (tryb 
+                            14-bitowy: maks.11 bitów na wyjôciu).
+			  - 256 kanaîow = maks. 8 bitów na wyjôciu (tryb
+			    14-bitowy: maks. 6 bitów na wyjôciu).
+
+VOL		Funkcja : Ustala gîównâ gîoônoôê.
+		Zakres	: 0..100%.
+
+BL		Funkcja     : Ustala balans.
+		Zakres	    : 0..100.
+		Standardowo : 50.
+
+FREQ		Funkcja : Ustala czëstotliwoôê miksowania (w Hz).
+
+SPEED		Funkcja : Ustala szybkoôê odtwarzania (w BPM).
+
+PLAYER		Funkcja : Wyôwietla aktualny czas odtwarzania i caîkowity czas
+			  sekwencji/utworu.
+		NOTATKA	: Kiedy utwor zawiera tylko 1 sekwencjë, czas sekwencji
+			  jest czasem utworu.
+
+@{U}                                                                             @{UU}
+
+                              Kontrola odtwarzania
+@{U}                                                                             @{UU}
+
+STOP		Funkcja : Stop player.
+
+PATT		Funkcja : Odtwarza aktualny pattern.
+
+POS		Funkcja : Odtwarza utwór od aktualnej pozycji do koïca,.
+
+SEQ		Funkcja : Odtwarza aktualnâ sekwencjë.
+
+SONG		Funkcja : Odtwarza utwór.
+
+@{U}                                                                             @{UU}
+
+                                 Generowanie
+@{U}                                                                             @{UU}
+
+RENDER		Patrz @{"Generowanie" LINK Rendering}.
+
+FORMAT		Patrz @{"Generowanie" LINK Rendering}.
+
+@{U}                                                                             @{UU}
+
+                                  Efekty DSP
+@{U}                                                                             @{UU}
+
+ECHO		Funkcja : Ustala preferencje echa.
+		Zakres	: Dîugoôê bufora 1..DSP (w cyklach systemowych).
+			  Poziom 100%, 50%, 25%, 12.5%...
+
+DELAY		Funkcja : Ustala preferencje opóúnienia.
+		Zakres	: Dîugoôê 0..15 (w cyklach systemowych).
+			  Poziom 100%, 50%, 25%, 12.5%...
+
+HALL		Funkcja : Ustala preferencje efektu "halowego"
+		Zakres	: Dîugoôê ("wielkoôê hali") 0..16 (w cyklach 
+                          systemowych).
+			  Poziom 100%, 50%, 25%, 12.5%...
+
+@{U}                                                                             @{UU}
+
+                                     Diff
+@{U}                                                                             @{UU}
+
+SAMPLE DIFF	Funkcja     : Rozszerza obraz stereofoniczny.
+		Standardowo : 0.
+
+PITCH DIFF	Funkcja     : Rozszerza obraz stereofoniczny.
+		Standardowo : 0.
+
+@{U}                                                                             @{UU}
+
+                                 Wbudowane DSP
+@{U}                                                                             @{UU}
+
+DSP PLUG IN	Patrz @{"Wbudowane DSP" LINK DSPPlugIns}.
+
+@ENDNODE
+
+@NODE Instrument "Okno instrumentów"
+@TOC Windows
+@{U}                                                                             @{UU}
+
+                              Okno instrumentów
+@{U}                                                                             @{UU}
+
+<, >		Funkcja             : Poprzedni/nastëpny instrument
+		Skroty klawiaturowe : <DEL>, <HELP>
+		Zakres	            : 0..127
+
+R		Funkcja : Wczytuje ponownie i/lub przelicza instrumenty.
+
+LOAD		Funkcja : Wczytuje sampl do aktualnego instrumentu.
+		NOTATKA	: Aby zmieniê nazwë sampla, naleûy przytrzymaê <SHIFT>.
+
+VOL		Funkcja     : Ustala gîoônoôê aktualnego instrumentu.
+		Zakres	    : 1..200%
+		Standardowo : 100%
+		NOTATKA     : 100% jest maksymalnâ gîoônoôciâ bez "deformacji".
+
+@{U}                                                                             @{UU}
+
+                             Type (rodzaj instrumentu)
+@{U}                                                                             @{UU}
+
+1		Funkcja : Standardowy instrument bez pëtli.
+
+L		Funkcja : Zapëtlony instrument.
+
+SUST		Funkcja : Tworzy instrument sustained.
+		NOTATKA	: Ten instrument odtwarza:
+			  - Zakres narastania sampla.
+			  - Nastëpujâce po sobie pëtle (zdefiniowane przez 
+                            LOOP#).
+			  - Zakres wybrzmiewania sampla.
+
+@{U}                                                                             @{UU}
+
+                                      Op
+@{U}                                                                             @{UU}
+
+>>		Funkcja : Odtwarza instrument na obu kanaîach (nuta wpisywana			  the left channel).
+                          jest na lewym kanale)
+
+()		Funkcja : (NODSP) Nie uûywa DSP (np. CrossEcho) dla tego
+			  instrumentu.
+
+*		Funkcja : (NOTUNE) Nie wykonuje transpozycji instrumentu.
+
+MUTE		Funkcja : Wyîâcza aktualny instrument.
+
+REMOVE		Funkcja : Kasuje aktualny sampl..
+		NOTATKA	: Sampl nie zostanie skakowany jeûeli bëdzie on
+                          bazowaî na samplach wirtualnych (ViRT).
+
+@{U}                                                                             @{UU}
+
+                            Virt (instrumenty wirtualne)
+@{U}                                                                             @{UU}
+
+MIX		Funkcja : Tworzy @{"wirtualny" LINK ViRT}ual instrument (ViRT).
+
+QUE		Funkcja : Tworzy @{"wirtualny" LINK ViRT}ual instrument (ViRT).
+
+REMIX		Funkcja : Tworzy @{"wirtualny" LINK ViRT}ual instrument (ViRT).
+
+TRANSWAVE	Funkcja : Tworzy @{"wirtualny" LINK ViRT}ual instrument (ViRT).
+
+@{U}                                                                             @{UU}
+
+                                Tools (Narzëdzia)
+@{U}                                                                             @{UU}
+
+RVS		Funkcja : Odwraca aktualny sampl.
+
+I		Funkcja : Odwraca aktualny sampl o 180° w pionie.
+
+D		Funkcja : Obniûa brzmienie aktualnego sampla.
+		NOTATKA	: Aby przywróciê poprzedni stan, naleûy przytrzymaê <SHIFT>.
+
+FILT		Funkcja : Filtruje aktualny sampl.
+		NOTATKA	: Aby przywróciê poprzedni stan, naleûy przytrzymaê <SHIFT>.
+
+@{U}                                                                             @{UU}
+
+                          Tune ("strojenie" instrumentu)
+@{U}                                                                             @{UU}
+
+FINE		Funkcja  : "Stroi" aktualny instrument.
+		Zakres	 : -128..+127.
+		NOTATKA	 : Zakres obejmuje caîâ nutë.
+
+PITCH		Funkcja  : Pitch shift of an instrument.
+		Zakres	 : -12..+12 (2 oktawy).
+		Przykîad : 0 - C-2 odtwarzany bëdzie jako C-2.
+			   1 - C-2 odtwarzany bëdzie jako C#2.
+			   4 - C-2 odtwarzany bëdzie jako E-2.
+
+@{U}                                                                             @{UU}
+
+                                    Pëtle
+@{U}                                                                             @{UU}
+
+E		Funkcja : Zmienia koniec pëtli.
+
+B		Funkcja : Zmienia poczâtek pëtli.
+
+#		Funkcja : Numer pëtli instrumentu.
+
+
+
+SYNC		Funkcja : 
+
+@{U}                                                                             @{UU}
+
+                              Krzywa (wykres)
+@{U}                                                                             @{UU}
+
+Jest to wizualne przedstawienie aktualnego instrumentu.
+
+Tworzenie pëtli:
+
+- Naciônij lewy klawisz myszy na wykresie i nie puszczaj go.
+- Przesuï wskaúnik myszy w inne miejsce wykresu (zaznaczysz wtedy zakres
+  pëtli).
+- Puôê lewy klawisz myszy.
+
+Pëtle sâ automatycznie optymalizowane, tak, aby wyeliminowaê zakîócenia.
+
+@ENDNODE
+
+@NODE SongEd "Okno SONGED."
+@TOC Windows
+@{U}                                                                             @{UU}
+
+                                Okno "SongEd"
+@{U}                                                                             @{UU}
+
+
+
+                                    Song (utwór)
+@{U}                                                                             @{UU}
+
+Kaûdy utwór zawiera okreôlonâ iloôê nastëpujâcyc po sobie sekwencji. 
+
+REC		Funkcja : W(y)îâcza tryb zapisu.
+
+LOAD		Funkcja : Wczytuje utwór.
+
+SAVE AS		Funkcja : Zapisuje plik SymSONG, pytajâc o jego nazwë.
+
+SAVE		Funkcja : Zapisuje plik SymSONG.
+
+MOD		Funkcja : Wczytuje plik SymMOD.
+
+NEW		Funkcja : Kasuje wszystkie dane dotyczâce utworu ;
+                          rozpoczyna edycjë nowego utworu.
+
+LEN		Funkcja : Ustala dîugoôê patternu (wszystkie dane ulegajâ
+                          zniszczeniu).
+
+PATTERN		Funkcja : Ustala iloôê patternów (wszystkie dane ulegajâ
+                          zniszczeniu).
+.
+
+@{U}                                                                             @{UU}
+
+                               Sequence (sekwencja)
+@{U}                                                                             @{UU}
+
+Kaûda sekwencja zawiera okreôlonâ iloôê nastëpujâcych po sobie pozycji.
+
+#		Funkcja : Wybiera aktualnâ sekwencjë.
+		Range	: 0..63.
+
+C		Funkcja : Kopiuje aktualnâ sekwencjë do bufora.
+
+X		Funkcja : Kopiuje aktualnâ sekwencjë do bufora i czyôci jej
+                          zawartoôê.
+
+P		Funkcja : Kopiuje bufor do aktualnej sekwencji.
+
+DUP		Funkcja : Tworzy kopië aktualnej sekwencji i wstawia jâ
+                          po niej.
+
+DEL		Funkcja : Czyôci aktualnâ sekwencjë.
+
+PLAY		Funkcja : Ustala status aktualnej sekwencji - sekwencja ma
+                          byê odtwarzana.
+
+SKIP		Funkcja : Ustala status aktualnej sekwencji - sekwencja ma
+                          byê pomijana podczas odtwarzania.
+
+END		Funkcja : Ustala status aktualnej sekwencji - sekwencja 
+                          stanowi koniec utworu.
+		NOTE	: Wszystkie nastëpne sekwencje nie bëdâ odtwarzane.
+
+BGN		Funkcja : Ustala poczâtkowâ pozycjë sekwencji.
+
+TRNS		Funkcja : Ustala wartoôê transpozycji sekwencji.
+
+LEN		Funkcja : Ustala dîugoôê sekwencji.
+
+LOOP		Funkcja : Okreôla, ile razy sekwencja ma byê odtwarzana.
+
+@{U}                                                                             @{UU}
+
+                                Position (pozycja)
+@{U}                                                                             @{UU}
+
+Kaûda pozycja okreôla czëôê patternu, która musi byê odtwarzana.
+
+#		Funkcja             : Zmienia pozycjë w sekwencji.
+		Skróty klawiaturowe : NUMPAD '(', NUMPAD ')'.
+		Zakres              : 0..511.
+
+PAT		Funkcja             : Numer patternu, przyporzâdkowana danej
+                                      pozycji.
+		Skróty klawiaturowe : NUMPAD '/', NUMPAD '*'.
+		Zakres              : 0..maksymalny numer patternu.
+
+CPY		Funkcja : Kopiuje aktualnâ pozycjë do bufora.
+
+DUP		Funkcja : Kopiuje aktualnâ pozycjë do nastëpnej.
+		NOTATKA	: Nastëpne pozycje sâ przesuwane o 1 pozycjë.
+
+PST		Funkcja : Wstawia zawartoôê bufora do aktualnej pozycji.
+
+CLR		Funkcja : Ustala poczâtkowe wartoôci aktualnej pozycji.
+
+INS		Funkcja : Wstawia 1 pozycjë.
+		NOTATKA	: Wszystkie nastëpne pozycje sâ przesuwane o 1 miejsce
+                          do przodu.
+
+DEL		Funkcja : Kasuje aktualnâ pozycjë.
+		NOTATKA	: Wszystkie nastëpne pozycje sâ przesuwane o 1 miejsce
+                          do tyîu.
+
+BGN		Funkcja : Poczâtkowa pozycja patternu.
+
+LEN		Funkcja : Iloôê pozycji, które majâ byê odtwarzane.
+
+CYCL		Funkcja  : Ustala szybkoôê odtwarzania (w cyklach systemowych).
+		NOTATKA  : Szybkoôê jest ustalany wyîâcznie dla aktualnej
+                           pozycji.
+			   (Real BPM = SYSTEM_BPM x 1 / POSITION_CYCL)
+		Przykîad : Cycl = 1, maksymalna szybkoôê odtwarzania.
+			   Cycl = 3, 1/3 maksymalnej prëdkoôci odtwarzania.
+			   Cycl = 5, 1/5 maksymalnej prëdkoôci odtwarzania.
+
+TRNS		Funkcja : Ustala wartoôê transpozycji.
+		NOTATKA	: Kiedy ustalone jest @{"NOTUNE" LINK Instrument}, 
+                          transpozycja nie jest wykonywana.
+
+LOOP		Funkcja : Ustala, ile razy ma byê odtwarzana pozycja.
+
+@ENDNODE
+
+@NODE PatternEd "Okno edycji patternu."
+@TOC Windows
+@{U}                                                                             @{UU}
+
+                             Okno edycji patternu.
+@{U}                                                                             @{UU}
+
+<, >		Funkcja             : Wybiera pattern.
+		Skróty klawiaturowe : NUMPAD '/', NUMPAD '*'.
+		Zakres	            : 0..maksymalny numer patternu.
+
+NOTE		Funkcja : Zaznacza nutë.
+
+TRK		Funkcja : Zaznacza aktualnâ ôcieûkë.
+
+PAT		Funkcja : Zaznacza caîy pattern.
+
+BLK		Funkcja            : Ustala poczâtek bloku w pozycji kursora.
+		Skrót klawiaturowy : <RETURN>.
+
+C		Funkcja : Kopiuje zaznaczony blok do bufora.
+
+X		Funkcja : Wycina zaznaczony blok do bufora.
+
+P		Funkcja : Wstawia zawartoôê bufora do aktualnej pozycji 
+                          kursora.
+
+DUP		Funkcja : Kopiuje blok z aktualnego patternu do nastëpnego patternu.
+		NOTATKA	: Pattern is increased by one.
+
+ADD		Funkcja : Wstawia zawartoôê bufora w aktualnâ pozycjë kursora.
+
+SHR		Funkcja : Kasuje wszystkie puste pozycje bloku,
+
+EXP		Funkcja : Wstawia pustâ pozycjë pomiëdzy wszystkie pozycje bloku.
+		UWAGA	: The bottom half of the block will be lost.
+
+MIR		Funkcja : Odwraca zawartoôê patternu (efekt "lustra").
+
+V		Funkcja :
+
+LOCK		Funkcja :
+
+KEYB		Funkcja  : Ta funkcja dodaje wartoôê do nuty..
+		Przykîad :
+				Nuta wpisana	KEYB	Nuta zapisana
+				------------	----	-------------
+				    C-2		 0	     C-2
+				    C-2		 1	     C#2
+				    C-2		 12	     C-3
+		NOTATKA : Aby podnieôê/opuôciê nutë o oktawë, naleûy 
+                          przytrzymaê <SHIFT>.
+
+ROT		Funkcja : Obraca blok.
+		NOTATKA	: Kiedy blok jest obrócony w dóî, ostatnia nuta 
+                          znajduje sië na poczâtku i odwrotnie,
+
+P		Funkcja : Opuszcza/podnosi wartoôê nuty w pozycji kursora.
+		NOTATKA	: Aby zmieniê wartoôê nuty o oktawë, naleûy 
+                          przytrzymaê <SHIFT>.
+
+I		Funkcja : Opuszcza/podnosi numer instrumentu w pozycji kursora.
+		NOTATKA	: Aby zmieniê numer instrumentu o 10, naleûy
+                          przytrzymaê <SHIFT>.
+
+V		Funkcja : Opuszcza/podnosi gîoônoôê w pozycji kursora.
+		NOTATKA	: Aby zmieniê gîoônoôê  o 10, naleûy przytrzymaê
+                          <SHIFT>.
+
+MACRO		Patrz @{"menu edycyjne" LINK Menu_Edit}.
+
+REC		Patrz @{"menu edycyjne" LINK Menu_Edit}.
+
+@ENDNODE
+
+@NODE NoteEd "Okno NOTE ED."
+@TOC Windows
+@{U}                                                                             @{UU}
+
+                               Okno "Note Ed"
+@{U}                                                                             @{UU}
+
+
+                            Pitch (barwa dúwiëku)
+@{U}                                                                             @{UU}
+
+
+SET	Funkcja   : Ustala aktualnâ czëstotliwoôê.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Nuty C0..C5 (0..72).
+		    Instrumenty 0..127.
+	NOTATKA	  : The instrument number must be set.
+
+D/U	Funkcja   : Pîynne podniesienie/obniûenie dúwiëku.
+	Rodzaj    : Efekt skomplikowany.
+	Parametry : Szybkoôê 0...255.
+		    Wartoôê 0 wyîâcza efekt.
+	NOTATKA   : Funkcje KeyOn i SetPitch zatrzymujâ ten efekt.
+
+ADD	Funkcja   : Zmienia aktualnâ czëstotliwoôê.
+        Rodzaj    : Efekt skomplikowany. (PIT+).
+	Params	  : Intensywnoôê -128..127.
+	NOTE	  : Zakres (-128...127) is about 4 half notes.
+		    Nowa czëst. = stara czëst. * (1 + C * 1 / 1024)
+		                = stara czëst. + (stara czëst. * 1 / 1024)
+
+VIBR	Funkcja   : Wibracja dúwiëku.
+	Rodzaj    : Efekt skomplikowany.
+	Parametry : Szybkoôê 0..128
+		    Gîëbokoôê wibracji 0..255
+		    0 = brak wibracji, 255 = maksymalna wibracja
+	NOTATKA	  : Wibracja moûe byê uûyta w tym samym czasie w poîâczeniu 
+                    z innymi efektami (np. podniesienie dúwiëku).
+
++	Funkcja   : Powiëkszenie czëstotliwoôci.
+	Rodzaj	  : Prosty efekt (PU1/PU2/PU4).
+
+-	Funkcja   : Zmniejszenie czëstotliwoôci.
+	Rodzaj	  : Prosty efekt (PD1/PD2/PD4).
+
+@{U}                                                                             @{UU}
+
+                                  Instrument
+@{U}                                                                             @{UU}
+
+FROM	Funkcja   : Odtwarza aktualny sampl od danej pozycji.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Pozycja 0..255.
+	NOTATKI   : - Kiedy efekt ten jest uûyty razem z numerem instrumentu,
+                      musi byê poprawna nuta
+                    - Pozycja sampla jest obliczana z podanych parametrów i
+                      wartoôci FADD.
+                    - Dostëpne sâ zmiany barwy dúwiëku i instrumentu (FR&P).
+                    - Aktualna czëstotliwoôê remains the same
+
+	Przykîad  : FADD= 0
+		  Parametry : Poz. sampla 0...255 definiuje pozycjë poczâtkowâ
+                              sampla kierunkowo.
+		  np.       : 0 = poczâtek, 128 = ôrodek, 255 = koniec
+
+		  FADD> 0
+		  Parametry : Poz. sampla 0...255 + FADD definiujâ pozycjë
+                              poczâtkowâ.
+		  np.       : FADD=5
+			      0 = poczâtek, 128 = ôrodek, 250 = koniec.
+			          (0+5)      (127+5)    (250+5)
+
+		  np.       : FADD=128
+			      0 = ôrodek, 127 = koniec, 255 = bîëdna wartoôê
+			        (0+128)   (127+128)     (255+128 !)
+
+FR&P	Funkcja   : "From & Set Pitch". Dziaîa jak funkcja FROM, ale nuta i
+                     instrument mogâ byê zdefiniowane jako poprawne.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Dúwiëk C0..C5.
+		    Pozycja sampla 0..255.
+		    Instrument 0..127.
+
+FSET	Funkcja   : "Parametr From ADD := " Ustala FROMADD (offset) sampla.		    sample.
+	Rodzaj    : Efekt skomplikowany.
+	Parametry : Pozycja sampla 0...255
+		    0 = Poczâtek, 128 = ôrodek, 255 = koniec
+	NOTATKA   : Rezultat dziaîania tego efektu jest sîyszalny, kiedy jest
+                    uûyty efekt FROM lub FR&P.
+
+FADD	Funkcja   : Zmienia "parametr From ADD". Dodaje parametr do funkcji 
+                    FROMADD.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Pozycja -128...127
+	NOTATKA   : Kombinacja FAD= i FADD moûe byê uûyta do zdefiniowania
+                    bardzo precyzyjnie poczâtku sampla.
+                    Rezultat dziaîania tego efektu jest sîyszalny, kiedy jest
+                    uûyty efekt FROM lub FR&P.
+		    Nowy FADD := stary FADD + pozycja * dîugoôê sampla / 16384.
+
+SVIB	Funkcja   : Obraca wskaúnik poczâtku sampla jak funkcja sinus.
+	Rodzaj    : Efekt skomplikowany.
+	Parametry : Szybkoôê 1..127 (vykle systemowe).
+		    0 = Zatrzymanie efektu.
+		    "Gîëbokoôê" efektu 0..100%
+	NOTATKA   : Rezultat dziaîania tego efektu jest sîyszalny, kiedy jest
+                    uûyty efekt FROM lub FR&P.
+	UWAGI     : SVIB i inne efekty nie mogâ byê uûywane razem.
+		    Przed poleceniem SVIB, musi byê ustalona wartoôê FSET(0).
+
+@{U}                                                                             @{UU}
+
+                                Volume (Gîoônoôê)
+@{U}                                                                             @{UU}
+
+SET	Funkcja   : Ustala gîoônoôê aktualnego kanaîu.
+	Rodzaj    : Prosty efekt.
+	Parametry : Gîoônoôê 1..100%.
+
+D/U	Funkcja   : Obniûenie/podniesienie gîoônoôci.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Szybkoôê 0...255
+		    0 wyîâcza zmiany gîoônoôci.
+
+VOL+
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Intensywnoôê -128...127
+	Funkcja   : Zmienia gîoônoôê z podanâ zmianâ intensywnoôci.
+	NOTATKA	  : Kiedy nowa gloônoôê wyjdzie poza ustalony limit, zostanie
+                    utrzymana stara gîoônoôê.
+		    Nowa gîoônoôê = stara gîoônoôê + intensywnoôê * 1/8
+
+TREM	Funkcja   : Tremolo.
+	Rodzaj 	  : Efekt skomplikowany.
+	Parametry : Szybkoôê 0..128
+		    "Gîëbokoôê" efektu 0..255
+		    0 = brak efektu, 255 = maksymalna wartoôê.
+	NOTATKA   : Efekt ten moûe byê uûyty razem z innymi efektami.
+		    (np. pîynnâ zmianâ gîoônoôci).
+
+AC
+	Rodzaj 	  : Efekt skomplikowany.
+	Parametry : Poczâtek 0..100 (poczâtkowa gîoônoôê na poczâtku sampla).
+		    Koniec 0..100 (koïcowa gîoônoôê na koïcu sampla).
+		    Rodzaj 0..1 (0=wyîâczony, 1= RampTo).
+		    Rodzaj(0) wyîâcza ten efekt.
+	Funkcja   : Efekt ten îâczy gîoônoôê kierunkowo na pozycjë sampla-
+		    (pozycjë sampla na gîoônoôê).
+		
+	NOTATKA	  : Wszystkie efekty gîoônoôci, poza Tremolo, nie sâ sîyszane
+                    podczas tworzenia (jednak wewnëtrznie sâ kontynuowane).
+
+OFF	Funkcja   : Wyîâcza gîoônoôê aktualnego kanaîu.
+	Rodzaj	  : Prosty efekt.
+
+ON	Funkcja   : Wîâcza gîoônoôê aktualnego kanaîu.
+	Rodzaj	  : Prosty efekt.
+
+
+@{U}                                                                             @{UU}
+
+                                 Other (inne)
+@{U}                                                                             @{UU}
+
+SPD	Funkcja   : Ustala nowâ szybkoôê.
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Cykle 1...255.
+	NOTATKA   : Nowa szybkoôê bëdzie uûywana do nowej pozycji lub do 
+                    ponownej zmiany szybkoôci.
+	Przykîad  : CYCL = 1  : Maksymalna szybkoôê (szybkoôê systemowa).
+                    CYCL = 3  : 1/3 maksymalnej szybkoôci.
+                    CYCL = 5  : 1/5 maksymalnej szybkoôci.
+
+KEYOFF	Funkcja   : Odtwarza z wyciszeniem czëôê instrumentu.
+	Rodzaj	  : Prosty efekt.
+	NOTATKA   : Ta funkcja dziaîa wyîâcznie z instrumentami SUSTained
+
+ECHO	Funkcja   : Ustala aktualne preferencje echa..
+	Rodzaj	  : Efekt skomplikowany.
+	Parametry : Rodzaje efektów Off (wyîâczony), Normal, CrossEcho, Cross2 
+                    (rezonator).
+		    Poziom 100%,50%,25%...
+		    Dîugoôê 1..n
+
+DELY
+	Funkcja   : Ustala aktualne preferencje opóúnienia.
+	Rodzaj    : Efekt skomplikowany.
+	Parametry : Rodzaje efektów Off (wyîâczony), Normal, Cross.
+		    Poziom 100%,50%,25%...
+		    Dîugoôê 1..n
+
+@{U}                                                                             @{UU}
+
+UWAGI:	        Retrig = nie ukoïczona funkcja.
+		CV     = nie ukoïczona funkcja.
+                NUMPAD = blok numeryczny (przy skrótach klawiaturowych).
+@{U}                                                                             @{UU}
+
+@{I}PROSTE EFEKTY{UI}
+
+Standardowe efekty, do których uûycia nie jest wymagane podanie ûadnych
+dodatkowych parametrów.
+
+
+@{I}EFEKTY SKOMPLIKOWANE@{UI}
+  
+Efekty, do których naleûy podaê od 1 do maksymalnie 3 parametrów.
+
+@ENDNODE
+
+@NODE Keyboard "Skróty klawiaturowe."
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                 Klawiatura.
+@{U}                                                                             @{UU}
+
+@{I}ESC@{UI}		-	Zatrzymuje odtwarzanie.
+@{I}F1@{UI}		-	W(y)îâcza kanaî.
+@{I}F2@{UI}		-	Odtwarza aktualny pattern.
+@{I}F3@{UI}		-	Odtwarza aktualnâ sekwencjë od aktualnej pozycji.
+@{I}F4@{UI}		-	Odtwarza aktualnâ sekwencjë.
+@{I}F5@{UI}		-	Odtwarza caîy utwor.
+@{I}F9@{UI}		-	W(y)îâcza zapis.
+@{I}F10@{UI}		-       Wczytuje sampl. 
+@{I}TAB@{UI}		-	Skacze do nastëpnej pozycji tabulatora.
+@{I}SHIFT+TAB@{UI}	-	Ustala pozycjë tabulatora (Standardowo: 0, 16, 32, 48, 63).
+@{I}RETURN@{UI}		-	Ustala poczâtek (1x) i koniec (2x) bloku.
+@{I}SPACE@{UI}		-	Czyôci aktualnâ nutë.
+@{I}SHIFT+SPACE@{UI}	-	Czyôci aktualnâ ôcieûkë.
+
+@{I}SHIFT@{UI}		-	Uûyty z gadgetami zwiëksza/zmniejsza wartoôci 
+                        o 10 lub nuty o 12 (1 oktawa).
+
+
+@{U}                                                                             @{UU}
+
+Blok numeryczny
+@{U}                                                                             @{UU}
+
+@{I}'[', ']'@{UI}	-	Przesuwa o pozycjë w górë/dóî.
+@{I}SHIFT+'[', ']'@{UI}	-	Przesuwa o 10 pozycji w gorë/dóî.
+@{I}'/', '*'@{UI}	-	Przesuwa o pattern w górë/dóî.
+@{I}SHIFT+'/', '*'@{UI}	-	Przesuwa o 10 patternów w górë/dóî.
+@{I}Ins@{UI}		-	Wstawia nutë.
+@{I}Del@{UI}		-	Kasuje nutë.
+@{I}'+'@{UI}		-	Gîoônoôê +1.
+@{I}SHIFT+'+'@{UI}	-	Gîoônoôê +10.
+@{I}'-'@{UI}		-	Gîoônoôê -1.
+@{I}SHIFT+'-'@{UI}	-       Gîoônoôê -10.
+@{I}6@{UI}		-	Instrument +1.
+@{I}SHIFT+6@{UI}		-	Instrument +10.
+@{I}9@{UI}		-	Instrument -1.
+@{I}SHIFT+9@{UI}		-	Instrument -10.
+@{I}5@{UI}		-	Barwa dúwiëku +1.
+@{I}SHIFT+5@{UI}		-	Barwa dúwiëku +10.
+@{I}8@{UI}		-	Barwa dúwiëku -1.
+@{I}SHIFT+8@{UI}		-	Barwa dúwiëku -10.
+
+@ENDNODE
+
+
+@NODE History "Historia SYMPHONIE"
+@TOC Main
+@{U}                                                                             @{UU}
+
+                              Historia @{B}Symphonie@{UB}
+@{U}                                                                             @{UU}
+
+v2.4f rel 7	Poprawiony system ochrony pamiëci
+		Poprawiony algorytm Memory violation (1x)
+		Zaimplementowany system antyzakîóceniowy takûe dla instrumentów
+                o statusie |>>|
+
+		Loader/konwerter formatu ProTrackera (v1.0 - ukoïczona wersja):
+		- îaduje format MOD (ProTracker, 31 instrumentow, 64 patterny)
+		- sample sâ zapisywane do katalogu t:
+		- konwertowana jest struktura moduîów
+		- Konwertowane sâ funkcje KeyOn oraz SetVol
+                - brak konwersji struktury pozycji
+
+		(wkrótce konwerter moduîów XM)
+
+v2.4f rel 6	Funkcja ColorOrgan: Zmodyfikowane kolory, interpreter kolorów
+		Poprawiony algorytm ZeroVolume (@{B}Symphonie@{UB} @{I}Jr@{UI})
+		Loader/konwerter formatu ProTrackera (nie ukoïczona wersja):
+		- îaduje format MOD (ProTracker, 31 instrumentów)
+		- sample sâ zapisywane do katalogu t:
+		- konwertowana jest struktura moduîów
+		- brak konwersji struktury pozycji
+
+v2.4f rel 5	Rozpoznawanie formatu sampli AIFF (sample Macintosh'a)
+		Poprawiony system ochrony pamiëci
+		Tryb Fastplay = Tryb Centerplay
+                Loader sampli wyôwietla teraz wiele informacji na temat formatu sampli
+		Zmodyfikowany algorytm automatycznej konwersji formatu WAVE
+		Dziaîanie na A1200/030-50
+		- 40 kanaîów (czëstotliwoôê ok. 36 kHz)
+		- 32 kanaîów (czëstotliwoôê ok. 40 kHz)
+
+v2.4f rel 3	Loader sampli wyôwietla teraz wiele informacji na temat formatu sampli
+		Zmodyfikowany algorytm automatycznej konwersji formatu WAVE
+		W peîni zaimplementowana funkcja Transwave Synthesis w @{B}Symphonie@{UB} @{I}Jr@{UI}
+
+v2.4f rel 1	Rozpoznawanie formatu sampli AIFF (sample Macintosh'a)
+
+v2.4e rel 2	Mikser sampli: Usuniëte zakîócenia na koïcu sampli
+		Poprawiony system antyzakîóceniowy
+		Od nowa napisany system antyzakîóceniony, dziaîajâcy w czasie
+                rzeczywistym
+
+v2.4e		DSP: Usuniëte bîëdy interfejsu DSP
+		Preferencje interfejsu uûytkownika (GUI)
+		Moûliwoôci nowego interfejsu uûytkownika (GUI)
+		Preferencje (GUI, Paths, Screenmode)
+		Podbicie sampli w utworach
+		Szybsze generowanie dúwiëku (dla twardych dysków lub napëdów
+                ZIP firmy iomega)
+
+v2.4d rel 2	W peîni zaimplementowany nowy system pëtli (ukoïczona wersja)
+		W peîni zaimplementowany system DSP - wersja 1.0
+
+V2.4d rel 1	Zaimplementowane funkcje DSP
+		Poprawione algorytmy antyzakîóceniowe
+
+V2.4c rel 1	Old Loopsystem improved for better Looping (@{B}Symphonie@{UB} @{I}Pro@{UI})
+		Od nowa napisany algorytm antyzakîóceniowy
+		W peîni zaimplementowany nowy system pëtli
+		System pëtl: nie ukoïczona wersja
+
+V2.4b rel 2	Maîe modyfikacje pëtli, zmodyfikowany loader sampli 8svx
+
+V2.4b		Usuniëty bîâd wystëpujâcy w wersji 2.4 (guru)
+		Zmodyfikowany load sampli 8svx (poprawione rozpoznawanie
+                sampli stereofonicznych)
+
+V2.4		NOWE FUNKCJE: MasterVolume
+		NOWE FUNKCJE: Balance
+		Zmodifikowany loader sampli
+
+
+V2.3e		Usuniëte maîe bîedy w edycju patternów (wyôwietlanie)
+		NOWE FUNKCJE: Nowa oferta cenowa
+		NOWE FUNKCJE: Funkcja Extract Quality
+
+V2.3d		Usuniëte maîe bîedy
+		Usuniëta opcja importu/eksportu sampli (Sample Import/Eksport)
+		Eksport sampli w formacie Wave i Maestro jako 8-bitowe
+
+V2.3c		Poprawiona dokumentacja
+		Poprawiona obróbka dúwiëku
+		Tryby Left/Right Surr zmienione na Mono Left/Mono Right
+		Symphonie nie odtwarza moduîów, jeûeli Twój procesor jest
+                przeciâûony 
+		Dzialanie na A1200/4MB      12 kanaîów (czëstotliwoôê ok. 18 kHz)
+			     A4000/EC030-25 12 kanaîów (czëstotliwoôê ok. 30 kHz)
+			     A4000/040-25   12 kanaîów (czëstotliwoôê ok. 40 kHz)
+			     A1200/030-50   12 kanaîów (czëstotliwoôê ok. 41 kHz)
+
+V2.3		Od nowa napisany wewnëtrzy system Sync!!
+		@{B}Symphonie@{UB} moûna teraz otworzyê na WB
+		NOWE FUNKCJE: Wyîâczenie efektów DSP podczas îadowania plików @{B}Symphonie@{UB}
+
+V2.2		NOWE FUNKCJE: O wiele lepsza jakoôê (@{B}Symphonie@{UB} @{I}Pro@{UI} i @{I}Jr@{UI})
+		NOWE FUNKCJE: Zmiana sampla
+		NOWE FUNKCJE: Potwierdzanie wyjôcia i usuniëcia utworu
+
+V2.11a		NOWE FUNKCJE: @{B}Symphonie@{UB} wskazuje nazwë i numer niemoûliwego do
+                              wczytania sampla,
+		     BRAK GURU
+		NOWE FUNKCJE: Algorytmy archiwizerów takûe dla 16-bitowych sampli
+		     - only processed on 16 Bit Samples
+		     - Zyski: wczeôniej 2-5% na 16-bitowych plikach SymMOD (lha), 
+                       teraz ok. 20%-30% (ôrednio)
+		     - nie destrukcyjne algorytmy (pierwszy na ôwiecie produkt,
+                       który robi to w taki sposób)
+
+V2.10c		NOWE FUNKCJE: @{B}Symphonie@{UB} teraz wczytuje sample spakowane
+                algorytmami XPK w wielu poîâczeniach (np. 3x DLTA + 2x SHRI + 5x NUKE !)
+		POPRAWKI: Brak zakîóceï w procesorze wirtualnych sampli (ViRT) (@{B}Symphonie@{UB} @{I}Pro@{UI})
+		POPRAWKI: Brak wielu problemow z wirtualnymi samplami (ViRT)
+		        (@{B}Symphonie@{UB} @{I}Pro@{UI})
+                Filtr szumów zamieniony na efekt IPFilter
+		NOWE EFEKTY: Sekwencer: Funkcje CV, Channel Vol/VFade/VFadeTo
+		Sekwencery kontrolujâ miksowanie kaûdego kanaîu
+		Ujemne wartoôci dajâ w rezultacie obrót o 180° (wyîâcznie w @{B}Symphonie@{UB} @{I}Pro@{UI})
+		Teraz sâ tu 3(!) sekwencery LFO, kontrolujâce gîoônoôci kanaîów:
+		LFO Poziom 1: Sekwencer (VSlide/SetVol)
+		LFO Poziom 2: Efekt Tremolo (na kanaîach) (Tremolo)
+		LFO Poziom 3: Mikser gîoônoôci kanaîów (CV)
+		   (Poziom 4: Gîoônoôê systemowa)
+
+V2.10b		POPRAWKI: Podbicie sampli (SAMPLEBOOST)>100% nie dziaîa w @{B}Symphonie@{UB} @{I}Pro@{UI}
+			 (2.10 odtwarza15-bitowy dúwiëk, 2.10b odtwarza 16-bitowy dúwiëk)
+		POPRAWKI: Knack in LPFilter
+		POPRAWKI: Wrong "About" text in @{B}Symphonie@{UB} @{I}Pro@{UI}
+		USUNIËTE: Nasty Colorflash
+		Zaimplementowany tryb HQ (wysoka jakoôê, bardziej skomplikowane
+                obliczenia, 50% wolniejszy tryb)
+		(Wyîâcznie w @{B}Symphonie@{UB} @{I}Pro@{UI})
+
+V2.10		NOWE FUNKCJE: EFEKTY DSP: Hall, CrossHall, CrossDelay
+			      Delay LPFilter/Hall LPFilter
+
+V2.04 		NOWE FUNKCJE: Bufor systemowy jest automatyczie ustawiany na 
+                              maksymalny jeûeli uûytkownik ustawi bufor zbyt
+                              duûy
+		NOWE FUNKCJE: NOWE EFEKTY DSP: CrossEcho2, CenterEcho (nie ukoïczona funkcja)
+		NOWE FUNKCJE: @{B}Symphonie@{UB} wczytuje teraz sample MAUD(IFF)
+                              (8-/16-bitowe/Mono/Stereo)
+		First @{B}Symphonie@{UB} @{I}Pro@{UI} (100% 16 Bit Program)
+		@{B}Symphonie@{UB} @{I}Pro@{UI} is about 30%-40% slower than @{B}Symphonie@{UB} @{I}Jr@{UI}
+		@{B}Symphonie@{UB} @{I}Pro@{UI} needs double the memory of @{B}Symphonie@{UB} @{I}Jr@{UI}
+		(16 Bit Samples)
+
+V2.03 		NOWE FUNKCJE: DSP LP Filter dla DSP Echo/CrossEcho
+
+V2.02    	NOWE FUNKCJE: @{B}Symphonie@{UB} wczytuje teraz 16-bitowe sample Maestro (Mono/Stereo)
+		NOWE FUNKCJE: @{B}Symphonie@{UB} wczytuje teraz 16-bitowe sample (Mono/Stereo)
+
+V2.01 beta	POPRAWKI: Spectrum , SamplePosPtr
+		POPRAWKI: Usuniëte problemy z dîugimi patternami
+		NOWE FUNKCJE: Poprawione dziaîanie funkcji Undo
+		NOWE FUNKCJE: Bpm rozszerzone do maks. 600Bpm
+		NOWE FUNKCJE: Zaimplementowany wyciszacz szumów (Prefs/)
+		NOWE FUNKCJE: Menu: Aktywne okno na wierzch
+		NOWE FUNKCJE: Poprawione dziaîanie gîoônoôci powyûej 100%.
+		Poprawione dziaîanie archiwizera.
+		POPRAWKI: Funkcje Note Delete/Insert Fixed
+		NOWE FUNKCJE: Funkcja Assist wskazuje koniec sekwencji/utworu
+		NOWE FUNKCJE: Efekt Surround Left/Right rozszerzony do 9-bitów (50% mniej
+                              szumu)
+		POPRAWKI: Funkcja Prefs/Force Update
+		USUNIËTE BÎEDY: Brak Guru pojawiajâcego sië przy koïcu odtwarzania
+                                utworu.
+		NOWE FUNKCJE: Wiele bîëdów wskazuje funkcja Assign, dodatkowe
+                              requestery OK
+		NOWE FUNKCJE: @{B}Symphonie@{UB} gotowy do uûywania 16-bitowych sampli
+		NOWE FUNKCJE: NoteEd now displays values as they act.
+		     (e.g. Old: VibratoDepth 128 ==> NOWE FUNKCJE: VibratoDepth 50.0 %)
+
+V2.0 beta	Zaimplementowane funkcje Assist
+		NOWE FUNKCJE: Prefs save/load
+		Zaimplementowane menu "Move"
+		Rozszerzone funkcje archiwizacji
+		NOWE EFEKTY: "PitchSlideTo", "ShiftEmphasis", "ReTrig"
+
+V1.5		Zaimplementowana funkcja DSP - Delay (îâczenie Echo i Delay -
+                efekt "halowy")
+		NOWE FUNKCJE: @{B}Symphonie@{UB} moûe teraz uûywaê efektów 
+                     Echo, Delay i Chorus szeregowo.
+		Zaimplementowany equalizer Scope 1.0 (wizualna analiza dúwiëku)
+		Zaimplemetowany archiwizer
+		-> pracuje od 100% do 1000% szybciej i posiada lepsze algorytmy
+                   archiwizacji
+		NOWE FUNKCJE: Prefs/Realtime/Force Update
+		NOWE FUNKCJE: Prefs/Realtime/Scope
+		NOWE FUNKCJE: Bezpoôredia kontrola DSP przez GUI
+		NOWE FUNKCJE: Funkcja podbicia sampli rozszerzona ze 100%
+                              na 200%
+
+V1.4		W peîni zaimplementowana struktura sekwencji
+		Zaimplementowane nowe efekty sampli (np. vibrato)
+		Wybór trybu graficznego (minimum 320x200)
+		Bezbîëdny oversampling 9-bitowy
+		Teraz program uûywa audio.device
+		Usuniëte problemy z VBR
+		Usuniëte problemy z systemem
+		Zaimplementowany efekt "chóru" DSP - Chorus
+		Zaimplementowana funkcja opóúnienia DSP - Delay.
+		DSP jest gotowe do uûywania wielu efektów jednoczeônie
+		Zaimplementowana kontrola dúwiëku stereofonicznego:
+		(m.in. regulacja barwy dúwiëku pomiëdzy lewym i prawym kanaîem)
+		Poprawione funkcje operacji na blokach.
+
+V1.3a		Od nowa napisany algorytm miksowania kanaîów (rozszerzenie do
+                16 bitów).
+		Algorytm miksowania kanaîów jest przystosowane do wspóîpracy
+                z kartami dúwiëkowymi (przede wszystkim Toccata).
+		Algorytm miksowania kanaîów uûywa buforów w pamiëci FAST.
+		-> uûytkownicy pamiëci FAST uzyskajâ lepsze efekty.
+		   @{B}Symphonie@{UB} moûe reraz uûywaê czëstotliwoôci 
+                   miksowania do 250 kHz !!!
+		   (jeôli masz odpowiedni monitor)
+		Rozszerzony handler GUI (wiele okien).
+		GUI przystosowuje sië do czcionek.
+		Od nowa napisane funkcje DSP, przystosowanie ich do sekwencji.
+		NOWE FUNKCJE: "PitchAdd", "VolumeAdd", "SetDSP", "Tremolo"
+			      "Vibrato"
+		Od nowa napisany edytor nut
+
+V1.x		Procesor sampli w peîni 16-bitowy
+		Strojenie sampla rozrzerzon do 4 oktaw
+		Od nowa napisany algorytm antyszumowy
+		NOWE FUNKCJE: "FromAdd", "FromSet", "SetSpeed"
+		Zaimplementowany handler wielookienkowy.
+
+V1.058		Mniejsze zakîócenia
+		Brak problemów z opcjâ sync
+		Automatyczna konwerscja formatu WAVE
+
+V1.057 		Wybieranie trybu graficznego
+		Oversampling
+
+V1.055		Automatyczne pëtle
+
+V1.054		Funkcja Macro
+
+V1.053		Funkcja Module/Extract Samples
+
+V1.04		Filtr IPOL
+                Transpozycje pozycji
+
+V1.01		Sample ViRT
+
+V0.01 June 93	Pierwsza wersja przeznaczona do testow.
+
+@ENDNODE
+
+
+@NODE ToDo "Things to do..."
+@TOC Main
+@{U}                                                                             @{UU}
+
+                                 Do zrobienia...
+@{U}                                                                             @{UU}
+
+	- Poprawa stabilnoôci pracy.
+	- Obsîuga Midi
+	- Interfejs uûytkownika (GUI)
+
+@ENDNODE
+
+
+@NODE Projects "Projekty."
+@TOC Main
+@{U}                                                                             @{UU}
+
+                  Nastëpujâce rozwiâzania sâ projektami:
+@{U}                                                                             @{UU}
+
+
+- Dúwiëk AuralSpace 3D ----------------------------------------------------
+---------------------------------------------------------------------------
+
+  Wyjôcia dúwiëku na 4 oddzielnych kanaîach, maks. 6-7 gîoôników dla
+  rzeczywistego dúwiëku trójwymiarowego.
+  (Nie pseudotrójwymiarowy dúwiëk jak dúwiëk Dolby Prologic Surround (tm)).
+ 
+  Potrzebny sprzët:
+  - np. 2x standardowe 16-bitowe karty dúwiëkowe (najlepsze rozwiâzanie)
+  - np. 1x karta dúwiëkowa + 1x standardowy dúwiëk Amigi.
+  - np. 1x karra dúwiëkowa z 4 kanalami (wyjôcia stereofoniczne 2x).
+
+  @{B}Symphonie@{UB} generuje zawsze dúwiëk trójwymiarowy z dowolnym 
+  pozycjonowaniem instrumentu.
+  .
+  (osie X/Y/Z)
+  Trójwymiarowy mikser z rzeczywistymi efektami trójwymiarowymi... :).
+
+
+  Ukîady gîoôników:
+
+  * = 1x gîoônik
+  O = 1x Subwoofer
+
+  Dúwiëk 2D RealSpace  - 4 oddzielne gîoôniki (2 wzmacniacze)
+  ------------------- 
+   
+  *--O--*      L1 - Przód - P1
+ 
+                      () 
+ 
+  *--O--*      L2 -  Tyî  - P2
+
+  - moûliwe uûycie 6 gîoôników (4 x standardowe, 2 x Subwoofers)
+
+
+  Dúwiëk 3D AuralSpace - 4 oddzielne gîoôniki (2 wzmacniacze)
+  --------------------       
+    
+  *----O----*  L1 - Przod/Dóî - P1      
+   \ .   . /                     
+    \  *  /          Ôrodek Góra         
+     \ O./ 
+      \*/            Tyî, dóî
+
+
+  Takie uîoûenie gîoôników umoûliwia uzyskanie reczywistego dúwiëku 
+  trójwymiarowego.
+  Moûliwe uûycie 6 gîoôników (4 x standardowe, 2 x Subwoofers)
+
+
+
+  Dúwiëk Dolby Prologic (tm) - 5 gîoôników (1x wzmacniacz)
+  -------------------------- 
+  (Moûliwe nie rzeczywiste rozkodowanie dúwiëku Prologic Surround).
+  
+  *--O--*      L1 - Ôrodek - P1
+ 
+                      () 
+ 
+  *-----*      L2    Tyî     P2
+
+
+
+
+
+
+
+
+-  Nastëpne @{B}Symphonie@{UB} ----------------------------------------------------
+--------------------------------------------------------------------------
+
+  - Mikser dúwiëku : 16/24 bity, 24 bity SoundStream (minimalnie)
+  - Generowanie dúwiëku 8/16/24/32-bitowego (jakoôê studyjna)
+  - Dúwiëk AuralSpace 3D (rzeczywisty dúwiëk trójwymiarowy przy uûyciu 4
+    gîoôników jako wyjôê dúwiëku)
+  - system miksowania PowerPC/Alpha Native/system DSP.
+  - Wspomaganie dwoma procesorami.
+    np. 1x 040 + 1x PowerPC
+    np. 1x 060 + 1x Alpha
+
+
+
+
+- Wspomaganie AHI --------------------------------------------------------
+--------------------------------------------------------------------------
+
+- Ten projekt jest moûliwy do zrealizowania teoretycznie.
+
+
+  Moûliwa architektura:
+
+                                      
+------------     ---------------     -------------------     ------------
+@{B}Symphonie@{UB} Ed     @{B}Symphonie@{UB} mikser    @{B}Symphonie@{UB} @{I}Pro@{UI}cessor     System AHI
+             --\                 --\                     --\ lub
+             --/ generuje        --/ DSP, Oversampler    --/ generowanie
+                 16/32/64 bity.
+                                                             lub mikser AHI
+------------     ---------------     -------------------     --------------
+
+                              /\
+                              ||
+                              ||
+                              \/
+
+                     ---------------------------
+                     Emulator "Synth"
+
+                     Emuluje rodzaje syntezy.
+                     ---------------------------
+
+
+Podziëkowania dla Martina Bloma za doskonaîy system AHI.
+
+@ENDNODE
+
+
+@NODE Ordering "Jak zamówiê SYMPHONIE"
+@TOC Main
+
+
+Symphonie Bestellung:
+
+
+        -------------------------------------------------------------------------
+        H O T   S U M M E R    D I S C O U N T   valid till August 97
+        -------------------------------------------------------------------------
+
+        Symphonie Pro ACADEMIC                                  35 USD / 60 DM
+        Symphonie Pro                                           70 USD / 120 DM
+
+        -------------------------------------------------------------------------
+        H O T   S U M M E R    D I S C O U N T   valid till August 97
+        -------------------------------------------------------------------------
+
+
+
+        Product Type                                            Price / Preis(*)
+        ------------                                            -------------
+        FREE Symphonie from internet                            free
+        FREE Symphonie                                          10 USD / 20 DM
+
+        Symphonie Pro ACADEMIC                                  60 USD / 110 DM
+        Symphonie Pro ACADEMIC & @{"Sound FX" link "AboutSFX"}                      83 USD / 150 DM
+        Symphonie Pro ACADEMIC for MacOS                       100 USD / 180 DM (planned)
+
+        Symphonie Pro                                          300 USD / 550 DM
+        Symphonie Pro & @{"Sound FX" link "AboutSFX"}                              323 USD / 580 DM
+        Symphonie Pro for MacOS                                400 USD / 700 DM (planned)
+
+        Symphonie FOR ENTERPRISEs                              (ask for special pricing)
+        Symphonie FOR USERGROUPS                               (ask for special pricing)
+
+        (*) Minimal amount !
+
+
+        Shipping Tax / Liefergebühren
+        -----------------------------
+        P&P                                                     10 USD / 20 DM
+
+        Express Service                                 add     10 USD / 18 DM
+        Nachname Service (you pay the postman)          add     10 USD / 18 DM (western europe only)
+        If you send a cheque please                     add     10 USD / 18 DM (billing tax)
+
+
+        - Cash in USD and western european currencies accepted
+        - Postal Moneyorder accepted
+
+        - Mailing via UPS possible. (Ask at UPS for shipping Tax)
+        - Import taxes vary for different countries
+        - Akceptowane : @{"Gotówka" link Cash} w USD / DM  oraz w @{"miëdzynarodowych walutach" link IntMO}.
+
+
+        People from outside Europe ask at their PO/Bank for shipping/paying possibilities.
+
+
+        NOTE: A cheap, very fast and safe way to get Symphonie is to use
+              POSTAL MONEYORDER. I recommend you use this way of ordering
+
+        Napisz na @{"ten" LINK Address} adres.
+
+
+
+Produkt Information:
+
+
+
+        --------------------------------------------------------------
+        Symphonie Pro :           300 USD   (Out for Sale, NOW !)
+        --------------------------------------------------------------
+        (includes Symphonie Jr)
+
+        - 8...256 Soundchannels
+
+        - 16 Bit Sample Preprocessor
+        - 16/16 Bit Mixer
+
+        - Audio OUT :  9Bit Stereo Amiga
+                      14Bit Stereo Amiga
+                      16Bit Digital Stereo (Audio Rendering)
+
+                      16Bit AHI (planned)
+
+        - Audio Rendering (for HDR, MC/LP/CD Production, DAT, Postmixing, Syncronisation ...)
+
+            Modes  : 8/16 Bit
+                     Mono/Stereo/L/R
+                     Little Endian/Big Endian
+
+            Format : Maestro (Samplitude support)
+                     MAUD (16 Bit iff) by Macrosystem
+                     Wave (PC) by Microsoft Inc.
+                     Raw
+
+            Multichannel possibility (Mute Samples/Tracks/Dsp)
+
+            Max 16x Pre Oversampling (Sample Preprocessor)
+
+        - Printed manuals are no longer planned
+          A HTML version of the guide is planned instead
+
+
+
+
+
+        SPECIAL PRICING CONDITIONS -----------------------------------
+        --------------------------------------------------------------
+
+
+
+        --------------------------------------------------------------
+        Symphonie Pro ACADEMIC:   60  USD   (Out for Sale, NOW !)
+        --------------------------------------------------------------
+        (includes Symphonie Jr)
+
+        - for non commercial purpose like :
+        
+          * private home use
+          * educational use at schools/ universities
+          * experimental purpose (no money earning purpose)
+          * freeware projects (freeware games, demos & other software)
+          * Authors of commercial Amiga Software also get this special discount
+          
+          if you spread you modules, but suddenly start gaining
+          money for your work, you have to upgrade to the non academic release
+          of course.
+
+
+
+        --------------------------------------------------------------
+        Symphonie & @{"SFX" link "AboutSFX"}         ADD 23 USD   (Out for Sale)
+        --------------------------------------------------------------
+        - Includes @{"SFX" link "AboutSFX"} (Digital Sound Processor)
+          by Stefan Kost
+          (for Sample Editing, Dsp fX and Sample Conversion)
+
+
+
+
+        ------------------------------------------------
+        @{B}Symphonie@{UB} DLA GRUP UÛYTKOWNIKÓW   (na sprzedaû)
+        ------------------------------------------------
+        - at least 2 people
+        - Ask for Special Pricing
+
+
+        ------------------------------------------------
+        @{B}Symphonie@{UB} DLA PRZEDSIËWZIËÊ       (na sprzedaû)
+        ------------------------------------------------
+        - 1x FULL SYMPHONIE PRO + MULTIUSER LICENCE
+        - Ask for Special Pricing
+
+
+Ordering is possible ONLY at:
+
+        RealTime Software
+
+        Patrick Meng
+        Rosenfeldweg 4
+        CH-6048 Horw
+        Switzerland
+
+
+@ENDNODE
+        
+
+
+@NODE MusicMarco "Music by Marco Ege."
+@TOC Main
+
+                         Interesujesz sië muzykâ ?
+                  ---------------------------------------
+                  (Dúwiëk do gier, Multimedia, Utwory...)
+
+
+
+
+                    ----------------------------------
+                    CD 1 : 2nd World : JUÛ W SPRZEDAÛY
+                    ----------------------------------
+
+                            35.00 SFr inkl P&P
+                           Progressive / Trance
+                             12 utworów, 67:18
+                       Wszystkie ôcieûki 16-bitowe.
+                            Oddzielna okîadka.
+
+
+                         -------------------------
+                         CD 2 : WKRÓTCE DO NABYCIA
+                         -------------------------
+
+
+                       Zamówienie przeôlij na adres:
+
+                                 Marco Ege
+                              Rigiblickweg 5
+                                 6048 Horw
+                                Switzerland
+
+                lub za poôrednictwem Internetu pmeng@vtx.ch
+
+@ENDNODE
+
+@NODE AboutSFX "Informacje o programie SoundFX"
+@TOC Main
+
+  SoundFX (C) Copyright 1993-1997 Stefan Kost
+  All Rights Reserved
+
+  Kontakt z autorem:
+
+  Stefan Kost
+  Holbeinstrasse 1
+  04229 Leipzig
+  Germany
+
+  Stadt- und Kreissparkasse Leipzig
+  BLZ: 860 555 92
+  KTO: 1867809822
+
+  e-mail : kost@imn.th-leipzig.de
+  telefon: Niemcy (0341) 4801589
+
+  Demonstracyjna wersja SoundFX jest dostëpna na Aminecie (katalog mus/edit,
+  pliki o nazwach zaczynajâcych sië od ciâgu "SFX").
+
+@ENDNODE
